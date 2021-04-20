@@ -6,7 +6,22 @@ import 'services/utils.dart' as utils;
 import 'styles/styles.dart';
 
 void main() {
-  runApp(MyApp());
+  String langCode = utils.LANG_CODE;
+
+  runApp(MaterialApp(
+    localizationsDelegates: [
+      MyLocalizationsDelegate(),
+      GlobalMaterialLocalizations.delegate,
+      GlobalWidgetsLocalizations.delegate
+    ],
+    onGenerateTitle: (BuildContext context) =>
+    MyLocalizations.of(context).localization['app_title'],
+    locale: Locale(langCode),
+    supportedLocales: [Locale('en')],
+    debugShowCheckedModeBanner: false,
+    theme: lightTheme,
+    home: MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -34,26 +49,21 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
-      localizationsDelegates: [
-        MyLocalizationsDelegate(),
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate
-      ],
-      onGenerateTitle: (BuildContext context) =>
-      MyLocalizations.of(context).localization['app_title'],
-      locale: Locale(langCode),
-      supportedLocales: [Locale('en')],
-      debugShowCheckedModeBanner: false,
-      theme: lightTheme,
-      home: FutureBuilder(
-        // Initialize FlutterFire:
-        future: initApp(),
-        builder: (context, snapshot) {
-          // Otherwise, show something whilst waiting for initialization to complete
+    return FutureBuilder(
+      // Initialize FlutterFire:
+      future: initApp(),
+      builder: (context, snapshot) {
+
+        if (snapshot.connectionState == ConnectionState.done) {
           return HomePage();
-        },
-      ),
+        }
+
+        return Scaffold(
+          body: Center(
+            child: CircularProgressIndicator(),
+          ),
+        );
+      },
     );
   }
 }
