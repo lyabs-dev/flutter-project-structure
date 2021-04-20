@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.notifygroup.lyabs243.flutter_structure">
+    package="todelete.org.notifygroup.lyabs243.flutter_app_to_delete">
     <!-- Flutter needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->
