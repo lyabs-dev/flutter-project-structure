@@ -2,7 +2,7 @@
     package="todelete.org.notifygroup.lyabs243.flutter_app_to_delete">
    <application
         android:label="Flutter App Structure"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
