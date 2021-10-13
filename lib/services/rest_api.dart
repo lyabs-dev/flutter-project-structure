@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class RestApi {
 
-  int statusCode;
-  Map mapResult;
+  int? statusCode = -1;
+  Map mapResult = {};
   BuildContext context;
 
   RestApi(this.context);

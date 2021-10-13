@@ -6,13 +6,14 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 
 class MyLocalizations {
+
   MyLocalizations(this.locale,this.map);
 
   final Locale locale;
   Map map;
-  static Map instanceLocalization;
+  static Map instanceLocalization = {};
 
-  static MyLocalizations of(BuildContext context) {
+  static MyLocalizations? of(BuildContext context) {
     return Localizations.of<MyLocalizations>(context, MyLocalizations);
   }
 

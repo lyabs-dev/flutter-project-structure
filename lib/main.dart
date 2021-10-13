@@ -15,7 +15,7 @@ void main() {
       GlobalWidgetsLocalizations.delegate
     ],
     onGenerateTitle: (BuildContext context) =>
-    MyLocalizations.of(context).localization['app_title'],
+    MyLocalizations.of(context)?.localization['app_title'],
     locale: Locale(langCode),
     supportedLocales: [Locale('en')],
     debugShowCheckedModeBanner: false,
