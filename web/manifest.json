@@ -1,6 +1,6 @@
 {
-    "name": "flutter_app_to_delete",
-    "short_name": "flutter_app_to_delete",
+    "name": "flutter_app_structure",
+    "short_name": "flutter_app_structure",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

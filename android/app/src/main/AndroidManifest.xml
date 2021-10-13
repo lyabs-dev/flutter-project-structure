@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="todelete.org.notifygroup.lyabs243.flutter_app_to_delete">
    <application
-        android:label="flutter_app_to_delete"
+        android:label="Flutter App Structure"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
