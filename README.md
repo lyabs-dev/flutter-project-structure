@@ -12,8 +12,10 @@ Follow these steps to launch your project:
     <li>Go to <b>assets/images</b> and replace the logo.jpg file with your own (it must have the same name and the same extension)</li>
     <li>In flutter console, go to project folder then run these two commands:
     <blockquote>
-        <code>flutter pub get
-flutter pub run flutter_launcher_icons:main</code>
+        <code>
+            <p>flutter pub get</p>
+            <p>flutter pub run flutter_launcher_icons:main</p>
+        </code>
     </blockquote>
     </li>
     Open <b>assets/i18n/en.json</b> and replace <i>app_title</i> field with your app title
