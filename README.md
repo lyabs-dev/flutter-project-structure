@@ -18,6 +18,7 @@ Follow these steps to launch your project:
         </code>
     </blockquote>
     </li>
+    <li>
     Open <b>assets/i18n/en.json</b> and replace <i>app_title</i> field with your app title
     </li>
     <li>In <b>lib/styles/styles.dart</b> change dark theme and light theme properties of your app</li>
