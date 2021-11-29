@@ -3,18 +3,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_structure/presentation/screens/home/home.dart';
 import 'package:flutter_structure/presentation/styles/styles.dart';
 import 'package:flutter_structure/utils/constants.dart';
-import 'presentation/languages/localizations.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   runApp(MaterialApp(
-    localizationsDelegates: [
-      MyLocalizationsDelegate(),
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate
-    ],
-    onGenerateTitle: (BuildContext context) =>
-    MyLocalizations.of(context)?.localization['app_title'],
+    localizationsDelegates: AppLocalizations.localizationsDelegates,
+    onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
     locale: Locale(LANG_CODE),
     supportedLocales: SUPPORTED_LANGUAGES.toList().map((lang) => Locale(lang)),
     debugShowCheckedModeBanner: false,
