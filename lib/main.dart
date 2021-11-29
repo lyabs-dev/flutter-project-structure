@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'services/localizations.dart';
-import 'screens/home/home.dart';
-import 'services/utils.dart' as utils;
-import 'styles/styles.dart';
+import 'package:flutter_structure/presentation/screens/home/home.dart';
+import 'package:flutter_structure/presentation/styles/styles.dart';
+import 'package:flutter_structure/utils/constants.dart';
+import 'presentation/languages/localizations.dart';
+
 
 void main() {
-  String langCode = utils.LANG_CODE;
-
   runApp(MaterialApp(
     localizationsDelegates: [
       MyLocalizationsDelegate(),
@@ -16,8 +15,8 @@ void main() {
     ],
     onGenerateTitle: (BuildContext context) =>
     MyLocalizations.of(context)?.localization['app_title'],
-    locale: Locale(langCode),
-    supportedLocales: [Locale('en')],
+    locale: Locale(LANG_CODE),
+    supportedLocales: SUPPORTED_LANGUAGES.toList().map((lang) => Locale(lang)),
     debugShowCheckedModeBanner: false,
     theme: lightTheme,
     home: MyApp(),
@@ -35,8 +34,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
-  String langCode = utils.LANG_CODE;
-
   @override
   void initState() {
     super.initState();
@@ -50,7 +47,6 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
 
     return FutureBuilder(
-      // Initialize FlutterFire:
       future: initApp(),
       builder: (context, snapshot) {
 

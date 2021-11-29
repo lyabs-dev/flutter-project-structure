@@ -1,9 +1,10 @@
 import 'dart:async' show Future;
 import 'package:flutter/foundation.dart' show SynchronousFuture;
 import 'package:flutter/material.dart';
-import 'utils.dart' show languages;
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
+
+import 'package:flutter_structure/utils/constants.dart';
 
 class MyLocalizations {
 
@@ -27,7 +28,7 @@ class MyLocalizationsDelegate extends LocalizationsDelegate<MyLocalizations> {
   MyLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => languages.contains(locale.languageCode);
+  bool isSupported(Locale locale) => SUPPORTED_LANGUAGES.contains(locale.languageCode);
 
   @override
   Future<MyLocalizations> load(Locale locale) async {

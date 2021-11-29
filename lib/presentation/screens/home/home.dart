@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../services/localizations.dart';
+
+import '../../languages/localizations.dart';
 
 class HomePage extends StatefulWidget {
 
