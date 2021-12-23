@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_structure/presentation/router/app_router.dart';
 import 'package:flutter_structure/presentation/screens/home/home.dart';
 import 'package:flutter_structure/presentation/styles/styles.dart';
 import 'package:flutter_structure/utils/constants.dart';
@@ -13,25 +14,15 @@ void main() {
     supportedLocales: SUPPORTED_LANGUAGES.toList().map((lang) => Locale(lang)),
     debugShowCheckedModeBanner: false,
     theme: lightTheme,
-    home: MyApp(),
+    home: MyApp(appRouter: AppRouter(),),
   ));
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
 
-  @override
-  State<StatefulWidget> createState() {
-    return _MyAppState();
-  }
+  final AppRouter appRouter;
 
-}
-
-class _MyAppState extends State<MyApp> {
-
-  @override
-  void initState() {
-    super.initState();
-  }
+  const MyApp({Key? key, required this.appRouter,}) : super(key: key);
 
   Future initApp() async {
 
