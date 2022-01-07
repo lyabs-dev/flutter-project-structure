@@ -19,9 +19,9 @@ Follow these steps to launch your project:
     </blockquote>
     </li>
     <li>
-    Open <b>assets/i18n/en.json</b> and replace <i>app_title</i> field with your app title
+    Open <b>lib/presentation/languages/l10n/intl_en.arb</b> and replace <i>app_title</i> field with your app title
     </li>
-    <li>In <b>lib/styles/styles.dart</b> change dark theme and light theme properties of your app</li>
+    <li>In <b>lib/presentation/styles/styles.dart</b> change dark theme and light theme properties of your app</li>
 </ol>
 
 <h2>Android</h2>
