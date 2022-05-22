@@ -9,6 +9,9 @@ const FIELD_STATUS_CODE = 'status_code';
 //SHARED PREFERENCES
 const PREF_SETTINGS = 'settings';
 
+/// PAGES ARGUMENTS
+const ARGUMENT_ID = 'id';
+
 /// SETTINGS FIELD
 const SETTING_IS_DARK_MODE = 'is_dark_mode';
 const SETTING_LANGUAGE = 'language';
