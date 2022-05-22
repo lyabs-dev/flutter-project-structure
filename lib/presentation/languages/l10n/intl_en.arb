@@ -1,4 +1,10 @@
 {
   "@@locale": "en",
-  "appTitle": "App Title"
+  "appTitle": "App Title",
+  "errorOccurred": "Error Occurred",
+  "somethingWentWrong": "Something went wrong",
+  "warning": "Warning",
+  "error": "Error",
+  "success": "Success",
+  "info_": "Info"
 }
