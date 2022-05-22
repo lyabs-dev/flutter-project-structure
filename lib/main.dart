@@ -13,6 +13,7 @@ import 'package:flutter_structure/utils/constants.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_structure/utils/enums.dart';
+import 'package:flutter_structure/utils/size_config.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,6 +57,8 @@ class MyApp extends StatelessWidget {
               },
               child: BlocBuilder<AppCubit, AppState>(
                 builder: (appContext, appState) {
+
+                  SizeConfig().init(appContext);
 
                   if (appState.loadingState == CustomState.LOADING) {
                     return Scaffold(
