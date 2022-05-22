@@ -12,8 +12,8 @@ class SettingsRepository {
     return settings;
   }
 
-  Future setSettings(SettingsItem settingsItem) async {
-    await provider.setSettings(settingsItem);
+  Future<bool> setSettings(SettingsItem settingsItem) async {
+    return await provider.setSettings(settingsItem);
   }
 
 }
