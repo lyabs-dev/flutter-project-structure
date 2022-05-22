@@ -4,6 +4,8 @@ const SUPPORTED_LANGUAGES = ['en'];
 /// PAGES
 const PAGE_HOME = '/';
 
+const FIELD_STATUS_CODE = 'status_code';
+
 //SHARED PREFERENCES
 const PREF_SETTINGS = 'settings';
 

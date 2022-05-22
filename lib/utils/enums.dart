@@ -3,3 +3,10 @@ enum CustomState {
   DONE,
   ERROR,
 }
+
+enum HttpMethod {
+  Post,
+  Get,
+  Put,
+  Delete
+}
