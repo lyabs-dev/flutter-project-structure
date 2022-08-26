@@ -120,3 +120,8 @@ app.*.symbols
 # generated files for languages
 /lib/generated/
 /lib/l10n/
+
+#Firebase
+.firebaserc
+firebase.json
+/testexport/
