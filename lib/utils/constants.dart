@@ -19,7 +19,8 @@ const SETTING_IS_DARK_MODE = 'is_dark_mode';
 const SETTING_LANGUAGE = 'language';
 
 /// COLORS
-const Color COLOR_PRIMARY = Color(0XFF0000FF);
+const int COLOR_HEX = 0XFFD4946C;
+const Color COLOR_PRIMARY = Color(COLOR_HEX);
 
 /// FONTS SIZE
 const TEXT_SIZE_SMALL = 12.0;
