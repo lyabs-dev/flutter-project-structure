@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter_structure/utils/enums.dart';
 
 class AppState {
