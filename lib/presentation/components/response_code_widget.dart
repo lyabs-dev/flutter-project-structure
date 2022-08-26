@@ -1,7 +1,7 @@
 import 'package:flutter_structure/data/models/response_code_item.dart';
 import 'package:flutter_structure/presentation/components/app_dialog.dart';
 import 'package:flutter_structure/presentation/components/box_dialog.dart';
-import 'package:flutter_structure/presentation/components/dialog_confirm.dart';
+import 'package:flutter_structure/presentation/components/confirm_dialog.dart';
 import 'package:flutter_structure/utils/my_material.dart';
 
 class ResponseCodeWidget {
@@ -48,7 +48,7 @@ class ResponseCodeWidget {
         page = AppDialog(description: message, type: item.type, onButtonPressed: onDialogOkClick, context: context,);
         break;
       case DialogType.confirm:
-        page = DialogConfirm(title: message,);
+        page = ConfirmDialog(title: message,);
         break;
     }
 

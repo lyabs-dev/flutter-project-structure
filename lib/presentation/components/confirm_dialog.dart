@@ -2,9 +2,10 @@
 import 'package:flutter_structure/presentation/components/circle_button.dart';
 import 'package:flutter_structure/utils/my_material.dart';
 
-class DialogConfirm extends StatelessWidget {
+class ConfirmDialog extends StatelessWidget {
+
   final String title;
-  const DialogConfirm({Key? key, required this.title}) : super(key: key);
+  const ConfirmDialog({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
