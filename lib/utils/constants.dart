@@ -13,6 +13,7 @@ const PREF_SETTINGS = 'settings';
 
 /// PAGES ARGUMENTS
 const ARGUMENT_ID = 'id';
+const ARGUMENT_IS_NO_ANIMATION = 'is_no_animation';
 
 /// SETTINGS FIELD
 const SETTING_IS_DARK_MODE = 'is_dark_mode';
