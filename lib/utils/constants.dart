@@ -21,7 +21,10 @@ const SETTING_LANGUAGE = 'language';
 
 /// COLORS
 const int COLOR_HEX = 0XFFD4946C;
+
 const Color COLOR_PRIMARY = Color(COLOR_HEX);
+const Color COLOR_BLACK = Color(0XFF130B07);
+const Color COLOR_WHITE = Color(0XFFFFFFFF);
 
 /// FONTS SIZE
 const TEXT_SIZE_SMALL = 12.0;

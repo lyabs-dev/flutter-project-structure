@@ -1,5 +1,7 @@
-import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter_structure/data/models/response_code_item.dart';
+import 'package:flutter_structure/presentation/components/app_dialog.dart';
+import 'package:flutter_structure/presentation/components/box_dialog.dart';
+import 'package:flutter_structure/presentation/components/dialog_confirm.dart';
 import 'package:flutter_structure/utils/my_material.dart';
 
 class ResponseCodeWidget {
@@ -12,17 +14,8 @@ class ResponseCodeWidget {
 
   show() {
 
-    if (item.type == MessageType.Dialog) {
-      return AwesomeDialog(
-        context: context,
-        headerAnimationLoop: false,
-        dialogType: this.item.code.type,
-        width: 400,
-        title: title,
-        desc: message,
-        btnOkOnPress: onDialogOkClick?? () {},
-        btnOkColor: COLOR_PRIMARY,
-      ).show();
+    if (item.messageType == MessageType.Dialog) {
+      _showDialog(context,);
     }
     else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -36,32 +29,40 @@ class ResponseCodeWidget {
   }
 
   String get title {
-    String title = AppLocalizations.of(context)!.success;
-
-    if (this.item.code.type == DialogType.ERROR) {
-      title = AppLocalizations.of(context)!.error;
-    }
-    if (this.item.code.type == DialogType.INFO) {
-      title = AppLocalizations.of(context)!.info_;
-    }
-    if (this.item.code.type == DialogType.WARNING) {
-      title = AppLocalizations.of(context)!.warning;
-    }
-
-    return title;
+    return item.title(context);
   }
 
   String get message {
-    switch (this.item.code) {
-      case ResponseCode.Error:
-        return AppLocalizations.of(context)!.somethingWentWrong;
-      case ResponseCode.Warning:
-        return AppLocalizations.of(context)!.warning;
-      case ResponseCode.InFo:
-        return AppLocalizations.of(context)!.info_;
-      case ResponseCode.Success:
-        return AppLocalizations.of(context)!.success;
+    return item.message(context);
+  }
+
+  _showDialog(BuildContext context) {
+
+    Widget page;
+
+    switch (item.type) {
+      case DialogType.Warning:
+      case DialogType.Info:
+      case DialogType.Error:
+      case DialogType.Success:
+        page = AppDialog(description: message, type: item.type, onButtonPressed: onDialogOkClick,);
+        break;
+      case DialogType.Confirm:
+        page = DialogConfirm(title: message,);
+        break;
     }
+
+    return showDialog(
+        context: context,
+        barrierColor: COLOR_BLACK.withOpacity(0.7),
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return BoxDialog(
+              height: 300,
+              child: page
+          );
+        }
+    );
   }
 
 }

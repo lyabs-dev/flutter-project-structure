@@ -6,5 +6,9 @@
   "warning": "Warning",
   "error": "Error",
   "success": "Success",
-  "info_": "Info"
+  "info_": "Info",
+  "confirm": "Confirm",
+  "tryAgain": "Try Again",
+  "done": "Done",
+  "ok": "Ok"
 }
