@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_structure/data/models/settings_item.dart';
 import 'package:flutter_structure/data/repositories/settings_repository.dart';
 import 'package:flutter_structure/logic/cubits/app_cubit.dart';
@@ -47,7 +46,7 @@ class MyApp extends StatelessWidget {
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
             locale: Locale(state.settings.langCode),
-            supportedLocales: SUPPORTED_LANGUAGES.toList().map((lang) => Locale(lang)),
+            supportedLocales: supportedLanguages.toList().map((lang) => Locale(lang)),
             debugShowCheckedModeBanner: false,
             theme: (state.settings.isDarkMode)? darkTheme: lightTheme,
             onGenerateRoute: appRouter.onGenerateRoute,
@@ -60,15 +59,15 @@ class MyApp extends StatelessWidget {
 
                   SizeConfig().init(appContext);
 
-                  if (appState.loadingState == CustomState.LOADING) {
-                    return Scaffold(
+                  if (appState.loadingState == CustomState.loading) {
+                    return const Scaffold(
                       body: Center(
                         child: CircularProgressIndicator(),
                       ),
                     );
                   }
 
-                  return HomePage();
+                  return const HomePage();
                 },
               ),
             ),

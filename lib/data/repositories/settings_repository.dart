@@ -1,6 +1,5 @@
 import 'package:flutter_structure/data/models/settings_item.dart';
 import 'package:flutter_structure/data/providers/settings_provider.dart';
-import 'package:flutter_structure/utils/constants.dart';
 
 class SettingsRepository {
 

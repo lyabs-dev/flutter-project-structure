@@ -3,18 +3,19 @@ import 'package:flutter_structure/presentation/components/my_text.dart';
 import 'package:flutter_structure/utils/my_material.dart';
 
 class AppButton extends StatefulWidget {
-  String? text, icon, iconWhite;
-  Function onPressed;
-  FontWeight? textFontWeight;
-  double fontSize, borderRadius, paddingHorizontal, paddingVertical;
-  Color primaryColor, textColor;
-  bool whitIcons;
 
-  AppButton(this.text, this.onPressed,
+  final String? text, icon, iconWhite;
+  final Function onPressed;
+  final FontWeight? textFontWeight;
+  final double fontSize, borderRadius, paddingHorizontal, paddingVertical;
+  final Color primaryColor, textColor;
+  final bool whitIcons;
+
+  const AppButton(this.text, this.onPressed,
       {Key? key,
-      this.primaryColor = COLOR_PRIMARY,
-      this.textColor = COLOR_WHITE,
-      this.fontSize = TEXT_SIZE_S_MEDIUM,
+      this.primaryColor = colorPrimary,
+      this.textColor = colorWhite,
+      this.fontSize = textSizeSMedium,
       this.borderRadius = 15,
       this.textFontWeight,
       this.icon,
@@ -47,12 +48,12 @@ class _AppButtonState extends State<AppButton> {
         });
       },
       highlightColor: _reaction
-          ? COLOR_PRIMARY.withOpacity(0.30)
-          : COLOR_WHITE.withOpacity(0.30),
-      hoverColor: COLOR_WHITE,
+          ? colorPrimary.withOpacity(0.30)
+          : colorWhite.withOpacity(0.30),
+      hoverColor: colorWhite,
       child: Container(
         decoration: BoxDecoration(
-          color: _reaction ? COLOR_PRIMARY : widget.primaryColor,
+          color: _reaction ? colorPrimary : widget.primaryColor,
           borderRadius: BorderRadius.all(Radius.circular(widget.borderRadius)),
         ),
         padding: EdgeInsets.symmetric(
@@ -75,7 +76,7 @@ class _AppButtonState extends State<AppButton> {
                       widget.text!,
                       style: TextStyle(
                         fontSize: widget.fontSize,
-                        color: _reaction ? COLOR_WHITE : widget.textColor,
+                        color: _reaction ? colorWhite : widget.textColor,
                         fontWeight: widget.textFontWeight ?? FontWeight.w600,
                       ),
                     ),
@@ -86,7 +87,7 @@ class _AppButtonState extends State<AppButton> {
                 widget.text!,
                 style: TextStyle(
                   fontSize:widget.fontSize,
-                  color: _reaction ? COLOR_WHITE : widget.textColor,
+                  color: _reaction ? colorWhite : widget.textColor,
                   fontWeight: widget.textFontWeight ?? FontWeight.w600,
                 ),
               ),

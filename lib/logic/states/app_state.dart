@@ -4,7 +4,7 @@ class AppState {
 
   CustomState loadingState;
 
-  AppState({this.loadingState: CustomState.LOADING,});
+  AppState({this.loadingState = CustomState.loading,});
 
 
   AppState copy() {

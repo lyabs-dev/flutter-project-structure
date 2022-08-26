@@ -4,20 +4,20 @@ abstract class ResponseCodeItem {
 
   MessageType messageType;
 
-  ResponseCodeItem({this.messageType: MessageType.Toast});
+  ResponseCodeItem({this.messageType = MessageType.toast});
 
   String message(BuildContext context);
 
   String title(BuildContext context) {
     String title = AppLocalizations.of(context)!.success;
 
-    if (this.type == DialogType.Error) {
+    if (type == DialogType.error) {
       title = AppLocalizations.of(context)!.error;
     }
-    if (this.type == DialogType.Info) {
+    if (type == DialogType.info) {
       title = AppLocalizations.of(context)!.info_;
     }
-    if (this.type == DialogType.Warning) {
+    if (type == DialogType.warning) {
       title = AppLocalizations.of(context)!.warning;
     }
 

@@ -1,20 +1,20 @@
 
 enum CustomState {
-  LOADING,
-  DONE,
-  ERROR,
+  loading,
+  done,
+  error,
 }
 
 enum HttpMethod {
-  Post,
-  Get,
-  Put,
-  Delete
+  post,
+  get,
+  put,
+  delete
 }
 
 enum MessageType {
-  Dialog,
-  Toast,
+  dialog,
+  toast,
 }
 
-enum DialogType {Error, Success, Info, Confirm, Warning}
+enum DialogType {error, success, info, confirm, warning}

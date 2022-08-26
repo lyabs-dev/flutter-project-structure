@@ -1,12 +1,11 @@
 import 'dart:ui';
-
 import 'package:flutter_structure/utils/my_material.dart';
 
 class BoxDialog extends StatelessWidget {
   final Widget child;
   final double? height, width;
 
-  BoxDialog({Key? key, required this.child, this.height: 400, this.width:double.infinity})
+  const BoxDialog({Key? key, required this.child, this.height = 400, this.width = double.infinity})
       : super(key: key);
 
   @override

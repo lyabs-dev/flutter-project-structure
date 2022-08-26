@@ -5,7 +5,9 @@ class MyText extends StatelessWidget {
   final String text;
   final TextStyle style;
   final TextAlign? textAlign;
-  MyText(this.text, {required this.style, this.textAlign});
+
+  const MyText(this.text, {Key? key, required this.style, this.textAlign}): super(key: key);
+
   @override
   Widget build(BuildContext context) {
     if (Platform.isIOS) {

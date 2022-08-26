@@ -8,18 +8,18 @@ class AppDialog extends StatelessWidget {
   final DialogType type;
   final Function()? onButtonPressed;
 
-  late BuildContext context;
+  final BuildContext context;
 
-  AppDialog({required this.description, required this.type, this.onButtonPressed});
+  const AppDialog({Key? key, required this.description, required this.type, this.onButtonPressed,
+    required this.context}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    this.context = context;
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: COLOR_WHITE,
+        color: colorWhite,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -27,21 +27,21 @@ class AppDialog extends StatelessWidget {
           Image.asset(
             iconPath,
             height: getProportionateScreenWidth(120),
-            color: COLOR_PRIMARY,
+            color: colorPrimary,
           ),
           MyText(
             title,
-            style: TextStyle(
-                color: COLOR_PRIMARY,
-                fontSize: TEXT_SIZE_LARGE_MEDIUM,
+            style: const TextStyle(
+                color: colorPrimary,
+                fontSize: textSizeLargeMedium,
                 fontWeight: FontWeight.w900),
           ),
           MyText(
             description,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              color: COLOR_PRIMARY,
-              fontSize: TEXT_SIZE_LARGE_MEDIUM,
+            style: const TextStyle(
+              color: colorPrimary,
+              fontSize: textSizeLargeMedium,
             ),
           ),
           AppButton(
@@ -61,43 +61,43 @@ class AppDialog extends StatelessWidget {
 
   String get iconPath {
     switch (type) {
-      case DialogType.Error:
+      case DialogType.error:
         return PathIcons.error;
-      case DialogType.Success:
+      case DialogType.success:
         return PathIcons.success;
-      case DialogType.Info:
+      case DialogType.info:
         return PathIcons.info;
-      case DialogType.Confirm:
+      case DialogType.confirm:
         return PathIcons.info;
-      case DialogType.Warning:
+      case DialogType.warning:
         return PathIcons.warning;
     }
   }
 
   String get title {
     switch (type) {
-      case DialogType.Error:
+      case DialogType.error:
         return AppLocalizations.of(context)!.error;
-      case DialogType.Success:
+      case DialogType.success:
         return AppLocalizations.of(context)!.success;
-      case DialogType.Info:
+      case DialogType.info:
         return AppLocalizations.of(context)!.info_;
-      case DialogType.Confirm:
+      case DialogType.confirm:
         return AppLocalizations.of(context)!.confirm;
-      case DialogType.Warning:
+      case DialogType.warning:
         return AppLocalizations.of(context)!.warning;
     }
   }
 
   String get textOnButton {
     switch (type) {
-      case DialogType.Error:
+      case DialogType.error:
         return AppLocalizations.of(context)!.tryAgain;
-      case DialogType.Success:
+      case DialogType.success:
         return AppLocalizations.of(context)!.done;
-      case DialogType.Info:
-      case DialogType.Confirm:
-      case DialogType.Warning:
+      case DialogType.info:
+      case DialogType.confirm:
+      case DialogType.warning:
         return AppLocalizations.of(context)!.ok;
     }
   }

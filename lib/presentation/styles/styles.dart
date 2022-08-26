@@ -3,30 +3,30 @@ import 'package:flutter_structure/utils/constants.dart';
 
 final darkTheme = ThemeData(
     primarySwatch: SwatchColor.color,
-    primaryColor: COLOR_PRIMARY,
+    primaryColor: colorPrimary,
     brightness: Brightness.dark
 );
 
 final lightTheme = ThemeData(
     primarySwatch: SwatchColor.color,
-    primaryColor: COLOR_PRIMARY,
+    primaryColor: colorPrimary,
     brightness: Brightness.light
 );
 
 class SwatchColor {
-  static const MaterialColor color = const MaterialColor(
-    COLOR_HEX,
-    const <int, Color>{
-      50: COLOR_PRIMARY,//10%
-      100: COLOR_PRIMARY,//20%
-      200: COLOR_PRIMARY,//30%
-      300: COLOR_PRIMARY,//40%
-      400: COLOR_PRIMARY,//50%
-      500: COLOR_PRIMARY,//60%
-      600: COLOR_PRIMARY,//70%
-      700: COLOR_PRIMARY,//80%
-      800: COLOR_PRIMARY,//90%
-      900: COLOR_PRIMARY,//100%
+  static const MaterialColor color = MaterialColor(
+    colorHex,
+    <int, Color>{
+      50: colorPrimary,//10%
+      100: colorPrimary,//20%
+      200: colorPrimary,//30%
+      300: colorPrimary,//40%
+      400: colorPrimary,//50%
+      500: colorPrimary,//60%
+      600: colorPrimary,//70%
+      700: colorPrimary,//80%
+      800: colorPrimary,//90%
+      900: colorPrimary,//100%
     },
   );
 }

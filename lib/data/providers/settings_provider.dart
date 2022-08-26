@@ -1,7 +1,5 @@
 import 'dart:convert';
-
-import 'package:flutter_structure/data/models/settings_item.dart';
-import 'package:flutter_structure/utils/constants.dart';
+import 'package:flutter_structure/utils/my_material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsProvider {
@@ -11,14 +9,14 @@ class SettingsProvider {
     Map<String, dynamic> result = SettingsItem().toMap();
 
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? settingsString = prefs.getString(PREF_SETTINGS);
+    String? settingsString = prefs.getString(prefSettings);
 
     if (settingsString != null) {
       try {
         result = json.decode(settingsString);
       }
       catch (e) {
-
+        //error message
       }
     }
 
@@ -27,7 +25,7 @@ class SettingsProvider {
 
   Future<bool> setSettings(SettingsItem settings) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    return await prefs.setString(PREF_SETTINGS, json.encode(settings.toMap()));
+    return await prefs.setString(prefSettings, json.encode(settings.toMap()));
   }
 
 }

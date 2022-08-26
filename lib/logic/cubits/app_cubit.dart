@@ -11,10 +11,10 @@ class AppCubit extends Cubit<AppState> {
 
   intiData() async {
     AppTest.run();
-    state.loadingState = CustomState.LOADING;
+    state.loadingState = CustomState.loading;
     emit(state.copy());
 
-    state.loadingState = CustomState.DONE;
+    state.loadingState = CustomState.done;
     emit(state.copy());
   }
 

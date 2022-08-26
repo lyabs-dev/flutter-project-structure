@@ -13,17 +13,17 @@ class DialogConfirm extends StatelessWidget {
       children: [
         Container(
           height: 40,
-          decoration: BoxDecoration(
-              color: COLOR_PRIMARY,
+          decoration: const BoxDecoration(
+              color: colorPrimary,
               borderRadius: BorderRadius.only(
                   topRight: Radius.circular(15), topLeft: Radius.circular(15))),
           child: Center(
             child: Text(
               AppLocalizations.of(context)!.confirm,
-              style: TextStyle(
-                  color: COLOR_WHITE,
+              style: const TextStyle(
+                  color: colorWhite,
                   fontWeight: FontWeight.w600,
-                  fontSize: TEXT_SIZE_NORMAL),
+                  fontSize: textSizeNormal),
             ),
           ),
         ),
@@ -31,10 +31,10 @@ class DialogConfirm extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Text(
            title,
-            style: TextStyle(
-                color: COLOR_PRIMARY,
+            style: const TextStyle(
+                color: colorPrimary,
                 fontWeight: FontWeight.w500,
-                fontSize: TEXT_SIZE_LARGE_MEDIUM,
+                fontSize: textSizeLargeMedium,
             ),
           ),
         ),

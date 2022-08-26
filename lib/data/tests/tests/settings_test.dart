@@ -1,5 +1,4 @@
-import 'package:flutter_structure/data/models/settings_item.dart';
-import 'package:flutter_structure/data/repositories/settings_repository.dart';
+import 'package:flutter_structure/utils/my_material.dart';
 import 'package:test/test.dart' as test;
 
 class SettingsTest {
@@ -8,7 +7,7 @@ class SettingsTest {
   static SettingsRepository repository = SettingsRepository();
 
   static run() {
-    print('=========Start Settings Test=========');
+    debugPrint('=========Start Settings Test=========');
 
     _get();
     _set();

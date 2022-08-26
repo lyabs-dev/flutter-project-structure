@@ -3,18 +3,20 @@ import 'package:flutter_structure/utils/my_material.dart';
 
 class CircleButton extends StatefulWidget {
 
-  Function onPressed;
-  FontWeight? textFontWeight;
-  IconData? icon;
-  double size, height;
-  Color primaryColor, iconColor;
+  final Function onPressed;
+  final FontWeight? textFontWeight;
+  final IconData? icon;
+  final double size, height;
+  final Color primaryColor, iconColor;
 
-  CircleButton(this.icon, this.onPressed,
+  const CircleButton(this.icon, this.onPressed,
       {Key? key,
-        this.primaryColor = COLOR_PRIMARY,
-        this.iconColor = COLOR_WHITE,
-        this.size = TEXT_SIZE_NORMAL,
-        this.height = 50})
+        this.primaryColor = colorPrimary,
+        this.iconColor = colorWhite,
+        this.size = textSizeNormal,
+        this.height = 50,
+        this.textFontWeight
+      })
       : super(key: key);
 
   @override
@@ -41,12 +43,12 @@ class _CircleButtonState extends State<CircleButton> {
       child: Container(
 
         decoration: BoxDecoration(
-          color: _reaction ? COLOR_PRIMARY : widget.primaryColor,
+          color: _reaction ? colorPrimary : widget.primaryColor,
           shape: BoxShape.circle
         ),
         height: widget.height,
         width: widget.height,
-        child: Icon(widget.icon, color: _reaction ? COLOR_WHITE : widget.iconColor,size:widget.size , ),
+        child: Icon(widget.icon, color: _reaction ? colorWhite : widget.iconColor,size:widget.size , ),
       ),
     );
   }

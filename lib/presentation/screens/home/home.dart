@@ -6,14 +6,16 @@ import 'package:flutter_structure/logic/cubits/settings_cubit.dart';
 
 class HomePage extends StatefulWidget {
 
+  const HomePage({Key? key}): super(key: key);
+
   @override
-  _HomePageState createState() {
-    return _HomePageState();
+  HomePageState createState() {
+    return HomePageState();
   }
 
 }
 
-class _HomePageState extends State<HomePage> {
+class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +23,13 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.appTitle)
       ),
-      body: Container(
-        child: TextButton(
+      body: TextButton(
           onPressed: () {
             SettingsItem settingsItem = context.read<SettingsCubit>().state.settings;
             settingsItem.isDarkMode = !settingsItem.isDarkMode;
             context.read<SettingsCubit>().setSettings(settingsItem);
           },
-          child: Text('Set Theme')
-        ),
+          child: const Text('Set Theme')
       ),
     );
   }

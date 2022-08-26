@@ -1,38 +1,38 @@
 import 'my_material.dart';
 
-const LANG_CODE = 'en';
-const SUPPORTED_LANGUAGES = ['en'];
+const langCodeDefault = 'en';
+const supportedLanguages = ['en'];
 
 /// PAGES
-const PAGE_HOME = '/';
+const pageHome = '/';
 
-const FIELD_STATUS_CODE = 'status_code';
+const fieldStatusCode = 'status_code';
 
 //SHARED PREFERENCES
-const PREF_SETTINGS = 'settings';
+const prefSettings = 'settings';
 
 /// PAGES ARGUMENTS
-const ARGUMENT_ID = 'id';
-const ARGUMENT_IS_NO_ANIMATION = 'is_no_animation';
+const argumentId = 'id';
+const argumentIsNOAnimation = 'is_no_animation';
 
 /// SETTINGS FIELD
-const SETTING_IS_DARK_MODE = 'is_dark_mode';
-const SETTING_LANGUAGE = 'language';
+const settingIsDarkMode = 'is_dark_mode';
+const settingLanguage = 'language';
 
 /// COLORS
-const int COLOR_HEX = 0XFFD4946C;
+const int colorHex = 0XFFD4946C;
 
-const Color COLOR_PRIMARY = Color(COLOR_HEX);
-const Color COLOR_BLACK = Color(0XFF130B07);
-const Color COLOR_WHITE = Color(0XFFFFFFFF);
+const Color colorPrimary = Color(colorHex);
+const Color colorBlack = Color(0XFF130B07);
+const Color colorWhite = Color(0XFFFFFFFF);
 
 /// FONTS SIZE
-const TEXT_SIZE_SMALL = 12.0;
-const TEXT_SIZE_S_MEDIUM = 14.0;
-const TEXT_SIZE_MEDIUM = 17.0;
-const TEXT_SIZE_LARGE_MEDIUM = 20.0;
-const TEXT_SIZE_NORMAL = 24.0;
-const TEXT_SIZE_LARGE = 30.0;
-const TEXT_Size_X_LARGE = 35.0;
-const TEXT_SIZE_XX_LARGE = 45.0;
-const TEXT_SIZE_XXX_LARGE = 52.0;
+const textSizeSmall = 12.0;
+const textSizeSMedium = 14.0;
+const textSizeMedium = 17.0;
+const textSizeLargeMedium = 20.0;
+const textSizeNormal = 24.0;
+const textSizeLarge = 30.0;
+const textSizeXLarge = 35.0;
+const textSizeXXLarge = 45.0;
+const textSizeXXXLarge = 52.0;

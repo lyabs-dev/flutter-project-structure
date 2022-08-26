@@ -1,23 +1,20 @@
 import 'package:flutter_structure/data/models/response_code_item.dart';
 import 'package:flutter_structure/utils/my_material.dart';
 
-enum SimpleResponseCode {Error, Success}
+enum SimpleResponseCode {error, success}
 
 class SimpleResponse extends ResponseCodeItem {
 
-  @override
-  MessageType messageType;
-
   SimpleResponseCode code;
 
-  SimpleResponse({required this.code, this.messageType: MessageType.Toast});
+  SimpleResponse({required this.code, super.messageType = MessageType.toast});
 
   @override
   String message(BuildContext context) {
     switch (code) {
-      case SimpleResponseCode.Error:
+      case SimpleResponseCode.error:
         return AppLocalizations.of(context)!.error;
-      case SimpleResponseCode.Success:
+      case SimpleResponseCode.success:
         return AppLocalizations.of(context)!.success;
     }
   }
@@ -25,10 +22,10 @@ class SimpleResponse extends ResponseCodeItem {
   @override
   DialogType get type {
     switch (code) {
-      case SimpleResponseCode.Error:
-        return DialogType.Error;
-      case SimpleResponseCode.Success:
-        return DialogType.Success;
+      case SimpleResponseCode.error:
+        return DialogType.error;
+      case SimpleResponseCode.success:
+        return DialogType.success;
     }
   }
 

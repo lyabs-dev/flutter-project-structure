@@ -14,14 +14,14 @@ class ResponseCodeWidget {
 
   show() {
 
-    if (item.messageType == MessageType.Dialog) {
+    if (item.messageType == MessageType.dialog) {
       _showDialog(context,);
     }
     else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(message),
-          backgroundColor: COLOR_PRIMARY,
+          backgroundColor: colorPrimary,
         ),
       );
     }
@@ -41,20 +41,20 @@ class ResponseCodeWidget {
     Widget page;
 
     switch (item.type) {
-      case DialogType.Warning:
-      case DialogType.Info:
-      case DialogType.Error:
-      case DialogType.Success:
-        page = AppDialog(description: message, type: item.type, onButtonPressed: onDialogOkClick,);
+      case DialogType.warning:
+      case DialogType.info:
+      case DialogType.error:
+      case DialogType.success:
+        page = AppDialog(description: message, type: item.type, onButtonPressed: onDialogOkClick, context: context,);
         break;
-      case DialogType.Confirm:
+      case DialogType.confirm:
         page = DialogConfirm(title: message,);
         break;
     }
 
     return showDialog(
         context: context,
-        barrierColor: COLOR_BLACK.withOpacity(0.7),
+        barrierColor: colorBlack.withOpacity(0.7),
         barrierDismissible: false,
         builder: (BuildContext context) {
           return BoxDialog(

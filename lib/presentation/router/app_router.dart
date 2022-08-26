@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_structure/presentation/router/no_animation_route.dart';
-import 'package:flutter_structure/presentation/screens/home/home.dart';
-
-import '../../utils/constants.dart';
+import 'package:flutter_structure/utils/my_material.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -11,15 +8,15 @@ class AppRouter {
     Widget? page;
 
     switch (settings.name) {
-      case PAGE_HOME:
-        page = HomePage();
+      case pageHome:
+        page = const HomePage();
         break;
       default:
     }
 
     if (page != null) {
 
-      if (arguments != null && arguments[ARGUMENT_IS_NO_ANIMATION]) {
+      if (arguments != null && arguments[argumentIsNOAnimation]) {
         return NoAnimationMaterialPageRoute(builder: (_) => page!);
       }
 
