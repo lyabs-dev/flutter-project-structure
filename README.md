@@ -52,8 +52,6 @@ Follow these steps to launch your project:
 <h2>Web</h2>
 
 <ol>
-    <li>Go to <a href="https://www.favicon-generator.org/">Favicon Generator</a> and generate icons from your logo</li>
-    <li>Copy all generated files (except browserconfig and manifest) in <b>web/icons</b></li>
     <li>In <b>web/index.html</b> replace the value of <code>title</code> tag with your web app name</li>
     <li>In <b>web/index.html</b> replace the value of meta description content with a description of your app
     <blockquote>
