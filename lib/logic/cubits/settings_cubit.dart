@@ -5,16 +5,23 @@ import 'package:flutter_structure/logic/states/settings_state.dart';
 
 class SettingsCubit extends Cubit<SettingsState> {
 
+  SettingsRepository repository = SettingsRepository();
+
   SettingsCubit(SettingsState initialState) : super(initialState);
 
-  getSettings() async {
-    SettingsItem settings = await SettingsRepository().getSettings();
-    emit(SettingsState(settings,));
+  update() {
+    repository.setSettings(state.settings);
+    emit(state.copy());
   }
 
-  setSettings(SettingsItem settingsItem) async {
-    await SettingsRepository().setSettings(settingsItem);
-    emit(SettingsState(settingsItem,));
+  toggleDarkMode() async {
+    state.settings.isDarkMode = !state.settings.isDarkMode;
+    update();
+  }
+
+  setLanguage(String lang) async {
+    state.settings.langCode = lang;
+    update();
   }
 
 }

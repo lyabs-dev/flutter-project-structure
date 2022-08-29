@@ -6,4 +6,10 @@ class SettingsState {
 
   SettingsState(this.settings,);
 
+  SettingsState copy() {
+    SettingsState copy = SettingsState(settings);
+
+    return copy;
+  }
+
 }

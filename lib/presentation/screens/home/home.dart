@@ -25,9 +25,7 @@ class HomePageState extends State<HomePage> {
       ),
       body: TextButton(
           onPressed: () {
-            SettingsItem settingsItem = context.read<SettingsCubit>().state.settings;
-            settingsItem.isDarkMode = !settingsItem.isDarkMode;
-            context.read<SettingsCubit>().setSettings(settingsItem);
+            context.read<SettingsCubit>().toggleDarkMode();
           },
           child: const Text('Set Theme')
       ),
