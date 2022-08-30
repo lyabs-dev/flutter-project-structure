@@ -36,3 +36,6 @@ const textSizeLarge = 30.0;
 const textSizeXLarge = 35.0;
 const textSizeXXLarge = 45.0;
 const textSizeXXXLarge = 52.0;
+
+/// NOTIFICATIONS
+const fieldNotificationType = 'type';

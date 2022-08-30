@@ -51,9 +51,7 @@ class MyApp extends StatelessWidget {
             theme: (state.settings.isDarkMode)? darkTheme: lightTheme,
             onGenerateRoute: appRouter.onGenerateRoute,
             home: BlocListener<AppCubit, AppState>(
-              listener: (context, state) {
-
-              },
+              listener: appListener,
               child: BlocBuilder<AppCubit, AppState>(
                 builder: (appContext, appState) {
 
@@ -76,4 +74,13 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
+  appListener(BuildContext context, AppState state) {
+
+  }
+
+  openPage(BuildContext context, String page, Map<String, dynamic> arguments) {
+
+  }
+
 }

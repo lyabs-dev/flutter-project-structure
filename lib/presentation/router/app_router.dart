@@ -16,7 +16,7 @@ class AppRouter {
 
     if (page != null) {
 
-      if (arguments != null && arguments[argumentIsNOAnimation]) {
+      if (arguments != null && (arguments[argumentIsNOAnimation]?? false)) {
         return NoAnimationMaterialPageRoute(builder: (_) => page!);
       }
 
