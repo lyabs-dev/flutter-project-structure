@@ -17,7 +17,7 @@ enum MessageType {
   toast,
 }
 
-enum DialogType {error, success, info, confirm, warning}
+enum DialogType {error, success, info, warning}
 
 //this one help to know if the notification must be shown inside the app or it must directly open
 // the page related to the notification

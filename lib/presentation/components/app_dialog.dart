@@ -1,4 +1,6 @@
 import 'package:flutter_structure/presentation/components/app_button.dart';
+import 'package:flutter_structure/presentation/components/box_dialog.dart';
+import 'package:flutter_structure/presentation/components/confirm_dialog.dart';
 import 'package:flutter_structure/presentation/components/my_text.dart';
 import 'package:flutter_structure/utils/my_material.dart';
 
@@ -67,8 +69,6 @@ class AppDialog extends StatelessWidget {
         return PathIcons.success;
       case DialogType.info:
         return PathIcons.info;
-      case DialogType.confirm:
-        return PathIcons.info;
       case DialogType.warning:
         return PathIcons.warning;
     }
@@ -82,8 +82,6 @@ class AppDialog extends StatelessWidget {
         return AppLocalizations.of(context)!.success;
       case DialogType.info:
         return AppLocalizations.of(context)!.info_;
-      case DialogType.confirm:
-        return AppLocalizations.of(context)!.confirm;
       case DialogType.warning:
         return AppLocalizations.of(context)!.warning;
     }
@@ -96,10 +94,23 @@ class AppDialog extends StatelessWidget {
       case DialogType.success:
         return AppLocalizations.of(context)!.done;
       case DialogType.info:
-      case DialogType.confirm:
       case DialogType.warning:
         return AppLocalizations.of(context)!.ok;
     }
+  }
+
+  static Future showConfirmDialog(BuildContext context, String title) async {
+    return showDialog(
+        context: context,
+        barrierColor: colorBlack.withOpacity(0.7),
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return BoxDialog(
+              height: 200,
+              child: ConfirmDialog(title: title),
+          );
+        }
+    );
   }
 
 }

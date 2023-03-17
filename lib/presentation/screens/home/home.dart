@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_structure/logic/cubits/settings_cubit.dart';
+import 'package:flutter_structure/presentation/components/app_dialog.dart';
+import 'package:flutter_structure/presentation/components/confirm_dialog.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -22,11 +24,23 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.appTitle)
       ),
-      body: TextButton(
-          onPressed: () {
-            context.read<SettingsCubit>().toggleDarkMode();
-          },
-          child: const Text('Set Theme')
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TextButton(
+            onPressed: () {
+              context.read<SettingsCubit>().toggleDarkMode();
+            },
+            child: const Text('Set Theme')
+          ),
+          TextButton(
+            onPressed: () {
+              AppDialog.showConfirmDialog(context, 'Do you like this app?')
+                  .then((value) => debugPrint('========> User\'s answer: $value'));
+            },
+            child: const Text('Show Confirm Dialog'),
+          )
+        ],
       ),
     );
   }

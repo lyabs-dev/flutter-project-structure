@@ -1,7 +1,6 @@
 import 'package:flutter_structure/data/models/response_code_item.dart';
 import 'package:flutter_structure/presentation/components/app_dialog.dart';
 import 'package:flutter_structure/presentation/components/box_dialog.dart';
-import 'package:flutter_structure/presentation/components/confirm_dialog.dart';
 import 'package:flutter_structure/utils/my_material.dart';
 
 class ResponseCodeWidget {
@@ -38,19 +37,8 @@ class ResponseCodeWidget {
 
   _showDialog(BuildContext context) {
 
-    Widget page;
+    Widget page = AppDialog(description: message, type: item.type, onButtonPressed: onDialogOkClick, context: context,);
 
-    switch (item.type) {
-      case DialogType.warning:
-      case DialogType.info:
-      case DialogType.error:
-      case DialogType.success:
-        page = AppDialog(description: message, type: item.type, onButtonPressed: onDialogOkClick, context: context,);
-        break;
-      case DialogType.confirm:
-        page = ConfirmDialog(title: message,);
-        break;
-    }
 
     return showDialog(
         context: context,
