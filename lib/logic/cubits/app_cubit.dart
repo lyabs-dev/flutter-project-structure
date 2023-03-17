@@ -30,4 +30,10 @@ class AppCubit extends Cubit<AppState> {
     emit(state.copy());
   }
 
+  // Simple test which display a success dialog
+  /*testShowDialog() async {
+    await Future.delayed(const Duration(milliseconds: 700));
+    showMessage(code: AppCode.success, type: MessageType.dialog);
+  }*/
+
 }

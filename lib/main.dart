@@ -5,6 +5,7 @@ import 'package:flutter_structure/logic/cubits/app_cubit.dart';
 import 'package:flutter_structure/logic/cubits/settings_cubit.dart';
 import 'package:flutter_structure/logic/states/app_state.dart';
 import 'package:flutter_structure/logic/states/settings_state.dart';
+import 'package:flutter_structure/presentation/components/page_container.dart';
 import 'package:flutter_structure/presentation/router/app_router.dart';
 import 'package:flutter_structure/presentation/screens/home/home.dart';
 import 'package:flutter_structure/presentation/styles/styles.dart';
@@ -50,8 +51,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: (state.settings.isDarkMode)? darkTheme: lightTheme,
             onGenerateRoute: appRouter.onGenerateRoute,
-            home: BlocListener<AppCubit, AppState>(
-              listener: appListener,
+            home: PageContainer(
               child: BlocBuilder<AppCubit, AppState>(
                 builder: (appContext, appState) {
 
@@ -73,14 +73,6 @@ class MyApp extends StatelessWidget {
         },
       ),
     );
-  }
-
-  appListener(BuildContext context, AppState state) {
-
-  }
-
-  openPage(BuildContext context, String page, Map<String, dynamic> arguments) {
-
   }
 
 }
