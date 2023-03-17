@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_structure/data/tests/app_test.dart';
+import 'package:flutter_structure/logic/responses/app_response.dart';
 import 'package:flutter_structure/logic/states/app_state.dart';
 import 'package:flutter_structure/utils/enums.dart';
 
@@ -13,6 +14,17 @@ class AppCubit extends Cubit<AppState> {
     AppTest.run();
     state.loadingState = CustomState.loading;
     emit(state.copy());
+
+    state.loadingState = CustomState.done;
+    emit(state.copy());
+  }
+
+  showMessage({AppCode? code, MessageType type = MessageType.toast}) async {
+    await Future.delayed(const Duration(milliseconds: 200));
+
+    if (code != null) {
+      state.response = AppResponse(code: code, messageType: type);
+    }
 
     state.loadingState = CustomState.done;
     emit(state.copy());
