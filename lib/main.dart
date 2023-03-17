@@ -7,6 +7,7 @@ import 'package:flutter_structure/logic/states/app_state.dart';
 import 'package:flutter_structure/logic/states/settings_state.dart';
 import 'package:flutter_structure/presentation/components/page_container.dart';
 import 'package:flutter_structure/presentation/router/app_router.dart';
+import 'package:flutter_structure/presentation/screens/error_page/error_page.dart';
 import 'package:flutter_structure/presentation/screens/home/home.dart';
 import 'package:flutter_structure/presentation/styles/styles.dart';
 import 'package:flutter_structure/utils/constants.dart';
@@ -64,6 +65,9 @@ class MyApp extends StatelessWidget {
                       ),
                     );
                   }
+
+                  ///An Error page
+                  ///return ErrorPage(title: 'Error', description: 'An erroer r An erroer rAn erroer rAn erroer rAn erroer rAn erroer rAn erroer rAn erroer r', onTry: () {});
 
                   return const HomePage();
                 },
