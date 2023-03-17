@@ -12,10 +12,10 @@ class ResponseCodeWidget {
 
   ResponseCodeWidget({required this.context, required this.item, this.onDialogOkClick});
 
-  show() {
+  Future show() async {
 
     if (item.messageType == MessageType.dialog) {
-      _showDialog(context,);
+      await _showDialog(context,);
     }
     else {
       ScaffoldMessenger.of(context).showSnackBar(
