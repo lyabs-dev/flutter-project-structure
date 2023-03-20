@@ -5,6 +5,7 @@ const supportedLanguages = ['en'];
 
 /// PAGES
 const pageHome = '/';
+const pageNotification = '/notification';
 
 const fieldStatusCode = 'status_code';
 
@@ -14,6 +15,7 @@ const prefSettings = 'settings';
 /// PAGES ARGUMENTS
 const argumentId = 'id';
 const argumentIsNOAnimation = 'is_no_animation';
+const argumentMessage = 'message';
 
 /// SETTINGS FIELD
 const settingIsDarkMode = 'is_dark_mode';
@@ -39,3 +41,4 @@ const textSizeXXXLarge = 52.0;
 
 /// NOTIFICATIONS
 const fieldNotificationType = 'type';
+const fieldNotificationMessage = 'message';
