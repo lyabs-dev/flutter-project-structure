@@ -6,13 +6,14 @@ import 'package:flutter_structure/utils/my_material.dart';
 
 class AppDialog extends StatelessWidget {
 
+  final String title;
   final String description;
   final DialogType type;
   final Function()? onButtonPressed;
 
   final BuildContext context;
 
-  const AppDialog({Key? key, required this.description, required this.type, this.onButtonPressed,
+  const AppDialog({Key? key, required this.title, required this.description, required this.type, this.onButtonPressed,
     required this.context}) : super(key: key);
 
   @override
@@ -71,19 +72,6 @@ class AppDialog extends StatelessWidget {
         return PathIcons.info;
       case DialogType.warning:
         return PathIcons.warning;
-    }
-  }
-
-  String get title {
-    switch (type) {
-      case DialogType.error:
-        return AppLocalizations.of(context)!.error;
-      case DialogType.success:
-        return AppLocalizations.of(context)!.success;
-      case DialogType.info:
-        return AppLocalizations.of(context)!.info_;
-      case DialogType.warning:
-        return AppLocalizations.of(context)!.warning;
     }
   }
 
