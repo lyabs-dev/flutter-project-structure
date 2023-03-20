@@ -9,19 +9,18 @@ abstract class ResponseCodeItem {
   String message(BuildContext context);
 
   String title(BuildContext context) {
-    String title = AppLocalizations.of(context)!.success;
 
-    if (type == DialogType.error) {
-      title = AppLocalizations.of(context)!.error;
-    }
-    if (type == DialogType.info) {
-      title = AppLocalizations.of(context)!.info_;
-    }
-    if (type == DialogType.warning) {
-      title = AppLocalizations.of(context)!.warning;
+    switch (type) {
+      case DialogType.error:
+        return AppLocalizations.of(context)!.error;
+      case DialogType.info:
+        return AppLocalizations.of(context)!.info_;
+      case DialogType.warning:
+        return AppLocalizations.of(context)!.warning;
+      default:
+        return AppLocalizations.of(context)!.success;
     }
 
-    return title;
   }
 
   DialogType get type;
