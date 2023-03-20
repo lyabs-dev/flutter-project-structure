@@ -125,3 +125,4 @@ app.*.symbols
 .firebaserc
 firebase.json
 /testexport/
+lib/firebase_options.dart
