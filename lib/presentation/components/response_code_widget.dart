@@ -37,7 +37,7 @@ class ResponseCodeWidget {
 
   _showDialog(BuildContext context) {
 
-    Widget page = AppDialog(description: message, type: item.type, onButtonPressed: onDialogOkClick, context: context,);
+    Widget page = AppDialog(title: title, description: message, type: item.type, onButtonPressed: onDialogOkClick, context: context,);
 
 
     return showDialog(
