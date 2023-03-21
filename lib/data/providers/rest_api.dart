@@ -9,19 +9,27 @@ class RestApi {
   RestApi({this.headerToken = ''});
 
   Future<http.Response?> getDataFromServer(String url, Map<String,dynamic> mapParams, {HttpMethod method = HttpMethod.post,
-    List<Map<String,dynamic>>? listParams}) async {
+    List<Map<String,dynamic>>? listParams, Map<String,String>? customHeaders}) async {
     http.Response? response;
 
     var params = listParams?? mapParams;
     Map<String, String> mapHeaders = {
       "Content-Type": "application/json",
-      "Authorization": "Bearer $headerToken"
     };
+
+    if (headerToken.isNotEmpty) {
+      mapHeaders['Authorization'] = 'Bearer $headerToken';
+    }
+
+    if (customHeaders != null) {
+      mapHeaders.addAll(customHeaders);
+    }
+
     Uri uri = Uri.parse(url);
     String body = jsonEncode(params);
 
     try{
-      //debugPrint('=======$url====$method===${jsonEncode(params)}');
+      //debugPrint('===$mapHeaders====$url====$method===${jsonEncode(params)}');
 
       if (method == HttpMethod.post) {
         response = await http.post(uri, headers: mapHeaders, body: body,);
