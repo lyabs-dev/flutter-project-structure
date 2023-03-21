@@ -1,8 +1,8 @@
-import 'package:flutter_structure/presentation/components/app_button.dart';
-import 'package:flutter_structure/presentation/components/box_dialog.dart';
-import 'package:flutter_structure/presentation/components/confirm_dialog.dart';
-import 'package:flutter_structure/presentation/components/my_text.dart';
-import 'package:flutter_structure/utils/my_material.dart';
+import 'package:lyabs_dev/presentation/components/app_button.dart';
+import 'package:lyabs_dev/presentation/components/box_dialog.dart';
+import 'package:lyabs_dev/presentation/components/confirm_dialog.dart';
+import 'package:lyabs_dev/presentation/components/my_text.dart';
+import 'package:lyabs_dev/utils/my_material.dart';
 
 class AppDialog extends StatelessWidget {
 

@@ -1,4 +1,4 @@
-import 'package:flutter_structure/utils/constants.dart';
+import 'package:lyabs_dev/utils/constants.dart';
 
 class SettingsItem {
 

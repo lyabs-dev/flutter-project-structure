@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_structure/logic/cubits/app_cubit.dart';
-import 'package:flutter_structure/logic/cubits/settings_cubit.dart';
-import 'package:flutter_structure/presentation/components/app_button.dart';
-import 'package:flutter_structure/presentation/components/app_dialog.dart';
-import 'package:flutter_structure/presentation/components/page_container.dart';
+import 'package:lyabs_dev/logic/cubits/app_cubit.dart';
+import 'package:lyabs_dev/logic/cubits/settings_cubit.dart';
+import 'package:lyabs_dev/presentation/components/app_button.dart';
+import 'package:lyabs_dev/presentation/components/app_dialog.dart';
+import 'package:lyabs_dev/presentation/components/page_container.dart';
 
 class HomePage extends StatefulWidget {
 

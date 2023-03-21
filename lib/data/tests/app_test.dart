@@ -1,4 +1,4 @@
-//import 'package:flutter_structure/data/tests/tests/settings_test.dart';
+//import 'package:lyabs_dev/data/tests/tests/settings_test.dart';
 
 class AppTest {
 

@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_structure/data/tests/app_test.dart';
-import 'package:flutter_structure/logic/responses/app_response.dart';
-import 'package:flutter_structure/logic/states/app_state.dart';
-import 'package:flutter_structure/utils/enums.dart';
+import 'package:lyabs_dev/data/tests/app_test.dart';
+import 'package:lyabs_dev/logic/responses/app_response.dart';
+import 'package:lyabs_dev/logic/states/app_state.dart';
+import 'package:lyabs_dev/utils/enums.dart';
 
 class AppCubit extends Cubit<AppState> {
 

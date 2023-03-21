@@ -1,4 +1,4 @@
-import 'package:flutter_structure/data/models/settings_item.dart';
+import 'package:lyabs_dev/data/models/settings_item.dart';
 
 class SettingsState {
 
