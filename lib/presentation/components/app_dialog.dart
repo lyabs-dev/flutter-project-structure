@@ -29,7 +29,7 @@ class AppDialog extends StatelessWidget {
         children: [
           Image.asset(
             iconPath,
-            height: getProportionateScreenWidth(120),
+            height: getProportionateScreenWidth(120, context),
             color: colorPrimary,
           ),
           MyText(
@@ -48,8 +48,9 @@ class AppDialog extends StatelessWidget {
             ),
           ),
           AppButton(
-            textOnButton,
-            () {
+            context: context,
+            text: textOnButton,
+            onPressed: () {
               if (onButtonPressed != null) {
                 onButtonPressed!();
               }

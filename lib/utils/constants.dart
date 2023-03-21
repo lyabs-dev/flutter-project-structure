@@ -28,6 +28,17 @@ const Color colorPrimary = Color(colorHex);
 const Color colorBlack = Color(0XFF130B07);
 const Color colorWhite = Color(0XFFFFFFFF);
 
+///PADDING
+const paddingSmall = 6.0;
+const paddingSMedium = 8.0;
+const paddingMedium = 11.0;
+const paddingLargeMedium = 14.0;
+const paddingNormal = 18.0;
+const paddingLarge = 24.0;
+const paddingXLarge = 31.0;
+const paddingXXLarge = 41.0;
+const paddingXXXLarge = 53.0;
+
 /// FONTS SIZE
 const textSizeSmall = 12.0;
 const textSizeSMedium = 14.0;

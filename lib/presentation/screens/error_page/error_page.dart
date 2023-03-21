@@ -12,7 +12,6 @@ class ErrorPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       backgroundColor: colorPrimary,
       body: SafeArea(
@@ -21,8 +20,8 @@ class ErrorPage extends StatelessWidget {
           color: Colors.white,
           child: ConstrainedBox(
             constraints: BoxConstraints(
-                minHeight: SizeConfig.screenHeight,
-                minWidth: SizeConfig.screenWidth),
+                minHeight: MediaQuery.of(context).size.height,
+                minWidth: MediaQuery.of(context).size.width),
             child: IntrinsicHeight(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -44,8 +43,8 @@ class ErrorPage extends StatelessWidget {
                   ),
                   Image(
                     filterQuality: FilterQuality.high,
-                    height: getProportionateScreenHeight(270),
-                    width: getProportionateScreenWidth(270),
+                    height: getProportionateScreenHeight(270, context),
+                    width: getProportionateScreenWidth(270, context),
                     color: colorPrimary,
                     image: AssetImage(
                       PathImage.notFound,
@@ -54,8 +53,9 @@ class ErrorPage extends StatelessWidget {
                   Visibility(
                     visible: onTry != null,
                     child: AppButton(
-                      AppLocalizations.of(context)!.tryAgain,
-                      (onTry!= null)? onTry!: () {},
+                      context: context,
+                      text: AppLocalizations.of(context)!.tryAgain,
+                      onPressed: (onTry!= null)? onTry!: () {},
                       paddingHorizontal: 30,
                     ),
                   )

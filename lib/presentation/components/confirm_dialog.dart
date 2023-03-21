@@ -52,7 +52,7 @@ class ConfirmDialog extends StatelessWidget {
                 height: 35,
               ),
               SizedBox(
-                width: getShortSize(10),
+                width: getShortSize(10, context),
               ),
               CircleButton(
                 Icons.done,

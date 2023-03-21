@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_structure/logic/cubits/app_cubit.dart';
 import 'package:flutter_structure/logic/cubits/settings_cubit.dart';
+import 'package:flutter_structure/presentation/components/app_button.dart';
 import 'package:flutter_structure/presentation/components/app_dialog.dart';
 import 'package:flutter_structure/presentation/components/page_container.dart';
 
@@ -29,19 +30,23 @@ class HomePageState extends State<HomePage> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TextButton(
-                onPressed: () {
-                  context.read<SettingsCubit>().toggleDarkMode();
-                },
-                child: const Text('Set Theme')
+            const SizedBox(height: 16),
+            AppButton(
+              text: 'Set Theme',
+              onPressed: () {
+                context.read<SettingsCubit>().toggleDarkMode();
+              },
+              context: context,
             ),
-            TextButton(
+            const SizedBox(height: 16),
+            AppButton(
+              text: 'Show Confirm Dialog',
               onPressed: () {
                 AppDialog.showConfirmDialog(context, 'Do you like this app?')
                     .then((value) => debugPrint('========> User\'s answer: $value'));
               },
-              child: const Text('Show Confirm Dialog'),
-            )
+              context: context
+            ),
           ],
         ),
       ),
