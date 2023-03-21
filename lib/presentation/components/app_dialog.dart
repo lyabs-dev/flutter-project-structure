@@ -29,7 +29,7 @@ class AppDialog extends StatelessWidget {
         children: [
           Image.asset(
             iconPath,
-            height: getProportionateScreenWidth(120, context),
+            height: 120,
             color: colorPrimary,
           ),
           MyText(
@@ -47,6 +47,7 @@ class AppDialog extends StatelessWidget {
               fontSize: textSizeLargeMedium,
             ),
           ),
+          const SizedBox(height: 8,),
           AppButton(
             context: context,
             text: textOnButton,

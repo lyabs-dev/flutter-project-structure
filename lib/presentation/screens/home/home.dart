@@ -34,7 +34,9 @@ class HomePageState extends State<HomePage> {
             AppButton(
               text: 'Set Theme',
               onPressed: () {
-                context.read<SettingsCubit>().toggleDarkMode();
+                //context.read<SettingsCubit>().toggleDarkMode();
+                //show app dialog
+                context.read<AppCubit>().testShowDialog();
               },
               context: context,
             ),
