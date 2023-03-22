@@ -9,7 +9,7 @@ const pageNotification = '/notification';
 
 const fieldStatusCode = 'status_code';
 
-//SHARED PREFERENCES
+/// SHARED PREFERENCES
 const prefSettings = 'settings';
 
 /// PAGES ARGUMENTS
@@ -28,7 +28,7 @@ const Color colorPrimary = Color(colorHex);
 const Color colorBlack = Color(0XFF130B07);
 const Color colorWhite = Color(0XFFFFFFFF);
 
-///PADDING
+/// PADDING
 const paddingSmall = 6.0;
 const paddingSMedium = 8.0;
 const paddingMedium = 11.0;
