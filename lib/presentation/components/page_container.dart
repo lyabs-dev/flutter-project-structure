@@ -28,8 +28,4 @@ class PageContainer extends StatelessWidget {
 
   }
 
-  openPage(BuildContext context, String page, Map<String, dynamic> arguments) {
-
-  }
-
 }
