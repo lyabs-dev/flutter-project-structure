@@ -3,7 +3,7 @@
     "short_name": "Lyabs Dev",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
+    "background_color": "#fff",
     "theme_color": "#D4946C",
     "description": "Lyabs Dev code architecture",
     "orientation": "portrait-primary",

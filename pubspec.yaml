@@ -36,13 +36,16 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.10.0
+  flutter_launcher_icons: ^0.12.0
   flutter_lints: ^2.0.1
 
 flutter_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/images/logo.jpg"
+  web:
+    generate: true
+    image_path: "assets/images/logo.jpg"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
