@@ -12,5 +12,7 @@
   "done": "Done",
   "ok": "Ok",
   "view": "View",
-  "loading": "Loading"
+  "loading": "Loading",
+  "no": "No",
+  "yes": "Yes"
 }

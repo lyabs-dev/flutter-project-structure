@@ -1,7 +1,6 @@
 import 'package:lyabs_dev/presentation/components/app_button.dart';
 import 'package:lyabs_dev/presentation/components/box_dialog.dart';
 import 'package:lyabs_dev/presentation/components/confirm_dialog.dart';
-import 'package:lyabs_dev/presentation/components/my_text.dart';
 import 'package:lyabs_dev/utils/my_material.dart';
 
 class AppDialog extends StatelessWidget {
@@ -32,14 +31,14 @@ class AppDialog extends StatelessWidget {
             height: 120,
             color: colorPrimary,
           ),
-          MyText(
+          Text(
             title,
             style: const TextStyle(
                 color: colorPrimary,
                 fontSize: textSizeLargeMedium,
                 fontWeight: FontWeight.w900),
           ),
-          MyText(
+          Text(
             description,
             textAlign: TextAlign.center,
             style: const TextStyle(

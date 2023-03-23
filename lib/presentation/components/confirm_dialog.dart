@@ -1,5 +1,4 @@
-
-import 'package:lyabs_dev/presentation/components/circle_button.dart';
+import 'package:lyabs_dev/presentation/components/app_button.dart';
 import 'package:lyabs_dev/utils/my_material.dart';
 
 class ConfirmDialog extends StatelessWidget {
@@ -44,22 +43,22 @@ class ConfirmDialog extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              CircleButton(
-                Icons.close,
-                () {
+              AppButton(
+                context: context,
+                text: AppLocalizations.of(context)!.no,
+                onPressed: () {
                   Navigator.of(context).pop(false);
                 },
-                height: 35,
               ),
               SizedBox(
                 width: getShortSize(10, context),
               ),
-              CircleButton(
-                Icons.done,
-                () {
+              AppButton(
+                context: context,
+                text: AppLocalizations.of(context)!.yes,
+                onPressed: () {
                   Navigator.of(context).pop(true);
                 },
-                height: 35,
               )
             ],
           ),
