@@ -34,9 +34,7 @@ class HomePageState extends State<HomePage> {
             AppButton(
               text: 'Set Theme',
               onPressed: () {
-                //context.read<SettingsCubit>().toggleDarkMode();
-                //show app dialog
-                context.read<AppCubit>().testShowDialog();
+                context.read<SettingsCubit>().toggleDarkMode();
               },
               context: context,
             ),
@@ -46,6 +44,14 @@ class HomePageState extends State<HomePage> {
               onPressed: () {
                 AppDialog.showConfirmDialog(context, 'Do you like this app?')
                     .then((value) => debugPrint('========> User\'s answer: $value'));
+              },
+              context: context
+            ),
+            const SizedBox(height: 16),
+            AppButton(
+              text: 'Show Dialog',
+              onPressed: () {
+                context.read<AppCubit>().testShowDialog();
               },
               context: context
             ),
