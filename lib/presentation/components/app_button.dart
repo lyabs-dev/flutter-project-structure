@@ -21,7 +21,7 @@ class AppButton extends StatelessWidget {
         this.fontSize = textSizeSMedium,
         this.borderRadius = 12,
         this.textFontWeight,
-        this.highlightColor = colorWhite,
+        this.highlightColor = colorPrimary,
         this.icon,
         this.paddingHorizontal = paddingMedium,
         this.paddingVertical = paddingMedium,
@@ -43,7 +43,7 @@ class AppButton extends StatelessWidget {
           }
         },
         highlightColor: colorWhite.withOpacity(0.2),
-        hoverColor: colorWhite,
+        hoverColor: colorPrimary,
         child: Ink(
           //  width: getProportionateScreenWidth(width!, context),
           decoration: BoxDecoration(
