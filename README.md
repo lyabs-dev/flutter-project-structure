@@ -22,7 +22,7 @@ Follow these steps to launch your project:
     Open <b>lib/presentation/languages/l10n/intl_en.arb</b> and replace <i>app_title</i> field with your app title
     </li>
     <li>
-        In <b>lib/utils/constants.dart</b> update COLOR_HEX constant with your main app color.
+        In <b>lib/utils/constants.dart</b> update colorHex constant with your main app color.
     </li>
     <li> (Optional) In <b>lib/presentation/styles/styles.dart</b> you can edit other style properties of your app.</li>
 </ol>
