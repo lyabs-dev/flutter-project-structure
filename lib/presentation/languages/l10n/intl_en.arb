@@ -14,5 +14,6 @@
   "view": "View",
   "loading": "Loading",
   "no": "No",
-  "yes": "Yes"
+  "yes": "Yes",
+    "noResultFound": "No result found !"
 }

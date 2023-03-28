@@ -32,6 +32,7 @@ dependencies:
   http: ^0.13.5
   test: ^1.21.1
   flutter_screenutil: ^5.6.1
+  lottie: ^2.3.1
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/icons/
+    - assets/lottie/
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
