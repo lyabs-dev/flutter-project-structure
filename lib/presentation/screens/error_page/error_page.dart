@@ -35,8 +35,6 @@ class ErrorPage extends StatelessWidget {
                   ),
                   Image(
                     filterQuality: FilterQuality.high,
-                    height: getProportionateScreenHeight(270, context),
-                    width: getProportionateScreenWidth(270, context),
                     image: AssetImage(
                       PathImage.notFound,
                     ),

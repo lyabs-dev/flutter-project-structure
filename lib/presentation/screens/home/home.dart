@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lyabs_dev/logic/cubits/app_cubit.dart';
 import '../../../utils/my_material.dart';
+import '../error_page/error_page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -25,7 +26,12 @@ class HomePageState extends State<HomePage> {
             AppButton(
               text: 'Set Theme',
               onPressed: () {
-                 context.read<SettingsCubit>().toggleDarkMode();
+                // context.read<SettingsCubit>().toggleDarkMode();
+                 Navigator.of(context).push(
+                   MaterialPageRoute(
+                     builder: (context) =>  const ErrorPage(title: 'Error', description: "I'm error",),
+                   ),
+                 );
               },
               context: context,
             ),
