@@ -27,6 +27,7 @@ const int colorHex = 0XFFD4946C;
 const Color colorPrimary = Color(colorHex);
 const Color colorBlack = Color(0XFF130B07);
 const Color colorWhite = Color(0XFFFFFFFF);
+const Color colorError = Color(0XFF969696);
 
 /// PADDING
 const paddingSmall = 6.0;
