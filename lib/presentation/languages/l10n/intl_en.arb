@@ -15,5 +15,6 @@
   "loading": "Loading",
   "no": "No",
   "yes": "Yes",
-    "noResultFound": "No result found !"
+  "noResultFound": "No result found!",
+  "empty":"Empty"
 }

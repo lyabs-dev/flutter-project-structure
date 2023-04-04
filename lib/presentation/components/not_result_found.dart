@@ -1,7 +1,7 @@
 import '../../utils/my_material.dart';
 
-class EmptyWidget extends StatelessWidget {
-  const EmptyWidget({Key? key}) : super(key: key);
+class NotResultFound extends StatelessWidget {
+  const NotResultFound({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,13 +9,13 @@ class EmptyWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Lottie.asset(
-          PathAnimation.emptyBox,
+          PathAnimation.notResultFound,
           height: 200,
           repeat: false,
           fit: BoxFit.fill,
         ),
         SizedBox(height: paddingLarge.r),
-        Text(AppLocalizations.of(context)!.empty,
+        Text(AppLocalizations.of(context)!.noResultFound,
             style: const TextStyle(color: colorError, fontSize: textSizeNormal, fontWeight: FontWeight.w700)),
       ],
     );

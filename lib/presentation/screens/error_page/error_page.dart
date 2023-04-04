@@ -33,7 +33,7 @@ class ErrorPage extends StatelessWidget {
                       fontSize: textSizeSmall,
                     ),
                   ),
-                  Image(
+                Image(
                     filterQuality: FilterQuality.high,
                     image: AssetImage(
                       PathImage.notFound,

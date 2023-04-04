@@ -12,5 +12,6 @@ class PathIcons{
 }
 
 class PathAnimation{
-  static String searchEmpty = "assets/lottie/search_empty.json";
+  static String notResultFound = "assets/lottie/not_result_found.json";
+  static String emptyBox = "assets/lottie/empty_box.json";
 }
