@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:lyabs_dev/utils/constants.dart';
 
 final darkTheme = ThemeData(
-    primarySwatch: SwatchColor.color,
-    primaryColor: colorPrimary,
-    brightness: Brightness.dark
+  primarySwatch: SwatchColor.color,
+  primaryColor: colorPrimary,
+  brightness: Brightness.dark,
+  useMaterial3: true,
 );
 
 final lightTheme = ThemeData(
-    primarySwatch: SwatchColor.color,
-    primaryColor: colorPrimary,
-    brightness: Brightness.light
+  primarySwatch: SwatchColor.color,
+  primaryColor: colorPrimary,
+  brightness: Brightness.light,
+  useMaterial3: true,
 );
 
 class SwatchColor {
