@@ -1,7 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.lyabs.structure">
-   <application
-        android:label="Lyabs Dev - Structure"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="Lyabs Dev"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

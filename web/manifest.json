@@ -1,11 +1,11 @@
 {
-    "name": "Lyabs Dev - Structure",
-    "short_name": "Lyabs Dev",
+    "name": "structure",
+    "short_name": "structure",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#fff",
+    "background_color": "#0175C2",
     "theme_color": "#D4946C",
-    "description": "Lyabs Dev code architecture",
+    "description": "YOUR_APP_DESCRIPTION",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

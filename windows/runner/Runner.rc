@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "dev.lyabs" "\0"
-            VALUE "FileDescription", "lyabs_dev" "\0"
+            VALUE "FileDescription", "structure" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "lyabs_dev" "\0"
+            VALUE "InternalName", "structure" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 dev.lyabs. All rights reserved." "\0"
-            VALUE "OriginalFilename", "lyabs_dev.exe" "\0"
-            VALUE "ProductName", "lyabs_dev" "\0"
+            VALUE "OriginalFilename", "structure.exe" "\0"
+            VALUE "ProductName", "structure" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
