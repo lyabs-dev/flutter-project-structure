@@ -29,7 +29,7 @@ class BoxDialog extends StatelessWidget {
             height: height,
             decoration: BoxDecoration(
               shape: BoxShape.rectangle,
-              color: Colors.white,
+              color: Theme.of(context).cardColor,
               borderRadius: BorderRadius.circular(15),
             ),
             child: child));
