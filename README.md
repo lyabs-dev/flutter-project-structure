@@ -30,7 +30,9 @@ Follow these steps to launch your project:
 <h2>Android</h2>
 
 <ol>
+    <li>In <b>android/app/build.gradle</b> look for <i>namespace</i> in <i>android</i> block and change it's value with your package name</li>
     <li>In <b>android/app/build.gradle</b> look for <i>applicationId</i> in <i>defaultConfig</i> block and change it's value with your package name</li>
+    <li>In <b>android/app/src/main/kotlin/dev/lyabs/structure/MainActivity.kt</b> replace <code>flutter_project_structure</code> with your package name</li>
     <li>In <b>android/app/src/main/AndroidManifest.xml</b> replace the value of <code>android:label</code> with your app name</li>
 </ol>
 
