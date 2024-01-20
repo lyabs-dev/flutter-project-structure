@@ -50,7 +50,7 @@ class HomePageState extends State<HomePage> {
               Container(
                 width: 1.sw,
                 height: 0.8.sh,
-                margin: EdgeInsets.all(8),
+                margin: const EdgeInsets.all(8),
                 color: colorPrimary.withOpacity(0.3),
               ),
               const SizedBox(height: 16),
