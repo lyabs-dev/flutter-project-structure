@@ -6,7 +6,7 @@ import 'package:structure/utils/enums.dart';
 
 class AppCubit extends Cubit<AppState> {
 
-  AppCubit(AppState initialState) : super(initialState) {
+  AppCubit(super.initialState) {
     intiData();
   }
 

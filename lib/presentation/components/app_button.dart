@@ -12,7 +12,7 @@ class AppButton extends StatelessWidget {
   final BuildContext context;
 
   const AppButton(
-      {Key? key,
+      {super.key,
         required this.text,
         required this.onPressed,
         required this.context,
@@ -26,8 +26,7 @@ class AppButton extends StatelessWidget {
         this.paddingHorizontal = paddingMedium,
         this.paddingVertical = paddingMedium,
         this.isLoading = false,
-        this.whitIcons = false})
-      : super(key: key);
+        this.whitIcons = false});
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ class SettingsCubit extends Cubit<SettingsState> {
 
   SettingsRepository repository = SettingsRepository();
 
-  SettingsCubit(SettingsState initialState) : super(initialState);
+  SettingsCubit(super.initialState);
 
   update() {
     repository.setSettings(state.settings);

@@ -5,8 +5,7 @@ class BoxDialog extends StatelessWidget {
   final Widget child;
   final double? height, width;
 
-  const BoxDialog({Key? key, required this.child, this.height = 400, this.width = double.infinity})
-      : super(key: key);
+  const BoxDialog({super.key, required this.child, this.height = 400, this.width = double.infinity});
 
   @override
   Widget build(BuildContext context) {

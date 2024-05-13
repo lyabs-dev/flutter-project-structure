@@ -1,7 +1,7 @@
 import '../../utils/my_material.dart';
 
 class NotResultFound extends StatelessWidget {
-  const NotResultFound({Key? key}) : super(key: key);
+  const NotResultFound({super.key});
 
   @override
   Widget build(BuildContext context) {

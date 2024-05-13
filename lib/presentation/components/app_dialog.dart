@@ -11,8 +11,8 @@ class AppDialog extends StatelessWidget {
 
   final BuildContext context;
 
-  const AppDialog({Key? key, required this.title, required this.description, required this.type, this.onButtonPressed,
-    required this.context}) : super(key: key);
+  const AppDialog({super.key, required this.title, required this.description, required this.type, this.onButtonPressed,
+    required this.context});
 
   @override
   Widget build(BuildContext context) {

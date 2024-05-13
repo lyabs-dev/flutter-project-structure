@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   final AppRouter appRouter;
   final SettingsItem settings;
 
-  const MyApp({Key? key, required this.appRouter, required this.settings}) : super(key: key);
+  const MyApp({super.key, required this.appRouter, required this.settings});
 
   @override
   Widget build(BuildContext context) {
