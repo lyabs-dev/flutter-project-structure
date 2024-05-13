@@ -1,5 +1,5 @@
-import 'package:lyabs_dev/data/models/response_code_item.dart';
-import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:structure/data/models/response_code_item.dart';
+import 'package:structure/utils/my_material.dart';
 
 enum AppCode {error, success}
 

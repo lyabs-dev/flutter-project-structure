@@ -1,4 +1,4 @@
-import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:structure/utils/my_material.dart';
 
 abstract class ResponseCodeItem {
 

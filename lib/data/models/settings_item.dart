@@ -1,4 +1,4 @@
-import 'package:lyabs_dev/utils/constants.dart';
+import 'package:structure/utils/constants.dart';
 
 class SettingsItem {
 

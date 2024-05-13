@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:structure/utils/my_material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsProvider {

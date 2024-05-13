@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lyabs_dev/logic/cubits/app_cubit.dart';
+import 'package:structure/logic/cubits/app_cubit.dart';
 import '../../../utils/my_material.dart';
 
 

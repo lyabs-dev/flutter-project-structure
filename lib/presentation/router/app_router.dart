@@ -1,5 +1,5 @@
-import 'package:lyabs_dev/presentation/router/no_animation_route.dart';
-import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:structure/presentation/router/no_animation_route.dart';
+import 'package:structure/utils/my_material.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {

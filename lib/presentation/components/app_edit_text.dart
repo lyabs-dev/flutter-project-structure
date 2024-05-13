@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:structure/utils/my_material.dart';
 
 class AppEditText extends StatelessWidget {
   final String? hintText, labelText;

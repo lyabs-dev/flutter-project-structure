@@ -1,7 +1,7 @@
-import 'package:lyabs_dev/logic/cubits/app_cubit.dart';
-import 'package:lyabs_dev/logic/states/app_state.dart';
+import 'package:structure/logic/cubits/app_cubit.dart';
+import 'package:structure/logic/states/app_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:structure/utils/my_material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,5 +1,5 @@
-import 'package:lyabs_dev/logic/responses/app_response.dart';
-import 'package:lyabs_dev/utils/enums.dart';
+import 'package:structure/logic/responses/app_response.dart';
+import 'package:structure/utils/enums.dart';
 
 class AppState {
 

@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lyabs_dev/data/repositories/settings_repository.dart';
-import 'package:lyabs_dev/logic/states/settings_state.dart';
+import 'package:structure/data/repositories/settings_repository.dart';
+import 'package:structure/logic/states/settings_state.dart';
 
 class SettingsCubit extends Cubit<SettingsState> {
 

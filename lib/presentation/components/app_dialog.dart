@@ -1,6 +1,6 @@
-import 'package:lyabs_dev/presentation/components/box_dialog.dart';
-import 'package:lyabs_dev/presentation/components/confirm_dialog.dart';
-import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:structure/presentation/components/box_dialog.dart';
+import 'package:structure/presentation/components/confirm_dialog.dart';
+import 'package:structure/utils/my_material.dart';
 
 class AppDialog extends StatelessWidget {
 

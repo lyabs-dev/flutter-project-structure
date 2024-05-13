@@ -11,4 +11,4 @@ PRODUCT_NAME = structure
 PRODUCT_BUNDLE_IDENTIFIER = dev.lyabs.structure
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 dev.lyabs. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2024 dev.lyabs. All rights reserved.

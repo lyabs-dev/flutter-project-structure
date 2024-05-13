@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:structure/utils/my_material.dart';
 
 class BoxDialog extends StatelessWidget {
   final Widget child;

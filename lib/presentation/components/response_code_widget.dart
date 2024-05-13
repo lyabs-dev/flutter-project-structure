@@ -1,6 +1,6 @@
-import 'package:lyabs_dev/data/models/response_code_item.dart';
-import 'package:lyabs_dev/presentation/components/box_dialog.dart';
-import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:structure/data/models/response_code_item.dart';
+import 'package:structure/presentation/components/box_dialog.dart';
+import 'package:structure/utils/my_material.dart';
 
 class ResponseCodeWidget {
 

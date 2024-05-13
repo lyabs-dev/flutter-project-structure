@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lyabs_dev/utils/constants.dart';
+import 'package:structure/utils/constants.dart';
 
 final darkTheme = ThemeData(
   primarySwatch: SwatchColor.color,

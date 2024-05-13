@@ -1,4 +1,4 @@
-name: lyabs_dev
+name: structure
 description: Lyabs Dev's Flutter application.
 
 # The following line prevents the package from being accidentally published to
@@ -18,20 +18,20 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 0.0.1+1
 
 environment:
-  sdk: ">=3.2.2 <4.0.0"
+  sdk: ">=3.3.4 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  intl: ^0.18.0
+  intl: ^0.18.1
   flutter_bloc: ^8.1.1
   shared_preferences: ^2.0.15
   cupertino_icons: ^1.0.5
   http: ^0.13.5
   test: ^1.21.1
-  flutter_screenutil: ^5.6.1
+  flutter_screenutil: ^5.9.0
   lottie: ^2.3.1
 
 dev_dependencies:
