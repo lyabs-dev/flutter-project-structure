@@ -25,6 +25,7 @@ const settingLanguage = 'language';
 const int colorHex = 0XFFD4946C;
 
 const Color colorPrimary = Color(colorHex);
+const Color colorSecondary = Color(0XFFC2C2C2);
 const Color colorBlack = Color(0XFF130B07);
 const Color colorWhite = Color(0XFFFFFFFF);
 const Color colorError = Color(0XFF969696);

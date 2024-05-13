@@ -6,6 +6,10 @@ final darkTheme = ThemeData(
   primaryColor: colorPrimary,
   brightness: Brightness.dark,
   useMaterial3: true,
+  colorScheme: const ColorScheme.dark(
+    primary: colorPrimary,
+    secondary: colorSecondary,
+  ),
 );
 
 final lightTheme = ThemeData(
@@ -13,6 +17,10 @@ final lightTheme = ThemeData(
   primaryColor: colorPrimary,
   brightness: Brightness.light,
   useMaterial3: true,
+  colorScheme: const ColorScheme.light(
+    primary: colorPrimary,
+    secondary: colorSecondary,
+  ),
 );
 
 class SwatchColor {
