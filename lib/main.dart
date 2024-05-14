@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         return MultiBlocProvider(
           providers: [
             BlocProvider<SettingsCubit>(
-                create: (context) => SettingsCubit(SettingsState(settings))
+                create: (context) => SettingsCubit(SettingsState(settings: settings))
             ),
             BlocProvider<AppCubit>(
                 create: (context) => AppCubit(AppState())
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
                   child: BlocBuilder<AppCubit, AppState>(
                     builder: (appContext, appState) {
 
-                      if (appState.loadingState == CustomState.loading) {
+                      if (appState.isLoading) {
                         return const Scaffold(
                           body: Center(
                             child: CircularProgressIndicator(),

@@ -1,30 +1,24 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:structure/logic/cubits/default_cubit.dart';
 import 'package:structure/logic/responses/app_response.dart';
 import 'package:structure/logic/states/app_state.dart';
 import 'package:structure/utils/enums.dart';
 
-class AppCubit extends Cubit<AppState> {
+class AppCubit extends DefaultCubit<AppState> {
 
-  AppCubit(super.initialState) {
-    initData();
-  }
+  AppCubit(super.initialState);
 
-  initData() async {
-    state.loadingState = CustomState.loading;
+  @override
+  void initData() {
+    state.isLoading = true;
     emit(state.copy());
 
-    state.loadingState = CustomState.done;
+    state.isLoading = false;
     emit(state.copy());
   }
 
-  showMessage({AppCode? code, MessageType type = MessageType.toast}) async {
-    await Future.delayed(const Duration(milliseconds: 200));
-
-    if (code != null) {
-      state.response = AppResponse(code: code, messageType: type);
-    }
-
-    state.loadingState = CustomState.done;
+  @override
+  Future<void> showMessage({AppCode? code, MessageType type = MessageType.toast}) async {
+    await super.showMessage(code: code, type: type);
     emit(state.copy());
   }
 

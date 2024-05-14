@@ -1,15 +1,16 @@
 import 'package:structure/data/models/settings_item.dart';
+import 'package:structure/logic/states/default_state.dart';
 
-class SettingsState {
+class SettingsState extends DefaultState {
 
-  SettingsItem settings;
+    SettingsItem settings;
 
-  SettingsState(this.settings,);
+    SettingsState({required this.settings, super.isLoading = true,});
 
-  SettingsState copy() {
-    SettingsState copy = SettingsState(settings);
+    @override
+    SettingsState copy() {
+      SettingsState copy = SettingsState(settings: settings, isLoading: isLoading,);
 
-    return copy;
-  }
-
+      return copy;
+    }
 }

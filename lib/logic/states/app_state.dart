@@ -1,16 +1,13 @@
 import 'package:structure/logic/responses/app_response.dart';
-import 'package:structure/utils/enums.dart';
+import 'package:structure/logic/states/default_state.dart';
 
-class AppState {
+class AppState extends DefaultState<AppResponse> {
 
-  CustomState loadingState;
-  AppResponse? response;
+  AppState({super.response, super.isLoading = true,});
 
-  AppState({this.loadingState = CustomState.loading, this.response});
-
-
+  @override
   AppState copy() {
-    AppState copy = AppState(loadingState: loadingState, response: response);
+    AppState copy = AppState(response: response, isLoading: isLoading,);
 
     return copy;
   }

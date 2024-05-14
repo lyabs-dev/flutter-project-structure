@@ -18,7 +18,7 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return PageContainer(
       child: Scaffold(
-        appBar: AppBar(title: Text('')),
+        appBar: AppBar(title: Text(AppLocalizations.of(context)!.appTitle)),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(8),
