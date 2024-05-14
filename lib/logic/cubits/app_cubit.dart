@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:structure/data/tests/app_test.dart';
 import 'package:structure/logic/responses/app_response.dart';
 import 'package:structure/logic/states/app_state.dart';
 import 'package:structure/utils/enums.dart';
@@ -11,7 +10,6 @@ class AppCubit extends Cubit<AppState> {
   }
 
   intiData() async {
-    AppTest.run();
     state.loadingState = CustomState.loading;
     emit(state.copy());
 
