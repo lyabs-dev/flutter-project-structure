@@ -1,19 +1,17 @@
 import 'package:structure/data/models/response_code_item.dart';
-import 'package:structure/presentation/components/box_dialog.dart';
 import 'package:structure/utils/my_material.dart';
 
 class ResponseCodeWidget {
 
   ResponseCodeItem item;
   BuildContext context;
-  Function()? onDialogOkClick;
 
-  ResponseCodeWidget({required this.context, required this.item, this.onDialogOkClick});
+  ResponseCodeWidget({required this.context, required this.item,});
 
   Future show() async {
 
     if (item.messageType == MessageType.dialog) {
-      await _showDialog(context,);
+      await _showDialog();
     }
     else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -34,22 +32,14 @@ class ResponseCodeWidget {
     return item.message(context);
   }
 
-  _showDialog(BuildContext context) {
+  _showDialog() {
 
-    Widget page = AppDialog(title: title, description: message, type: item.type, onButtonPressed: onDialogOkClick, context: context,);
-
-
-    return showDialog(
-        context: context,
-        barrierColor: colorBlack.withOpacity(0.7),
-        barrierDismissible: false,
-        builder: (BuildContext context) {
-          return BoxDialog(
-              height: 300,
-              child: page
-          );
-        }
+    AppDialog appDialog = AppDialog(title: title, description: message, context: context,
+      buttonPositiveText: item.textPositive(context), icon: item.icon,
+      onButtonPositivePressed: (BuildContext contextDialog) => Navigator.of(contextDialog).pop(),
     );
+
+    return appDialog.show();
   }
 
 }

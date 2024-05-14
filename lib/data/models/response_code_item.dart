@@ -23,6 +23,31 @@ abstract class ResponseCodeItem {
 
   }
 
+  IconData get icon {
+    switch (type) {
+      case DialogType.error:
+        return Icons.error;
+      case DialogType.success:
+        return Icons.check_circle;
+      case DialogType.info:
+        return Icons.info;
+      case DialogType.warning:
+        return Icons.warning;
+    }
+  }
+
+  String textPositive(BuildContext context) {
+    switch (type) {
+      case DialogType.error:
+        return AppLocalizations.of(context)!.tryAgain;
+      case DialogType.success:
+        return AppLocalizations.of(context)!.done;
+      case DialogType.info:
+      case DialogType.warning:
+        return AppLocalizations.of(context)!.ok;
+    }
+  }
+
   DialogType get type;
 
 }

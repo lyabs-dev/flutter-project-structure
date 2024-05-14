@@ -8,7 +8,7 @@ export 'package:lottie/lottie.dart';
 
 //components
 export 'package:structure/presentation/components/app_button.dart';
-export 'package:structure/presentation/components/app_dialog.dart';
+export 'package:structure/presentation/dialogs/app_dialog.dart';
 export 'package:structure/presentation/components/page_container.dart';
 
 //utils

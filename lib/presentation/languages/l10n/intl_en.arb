@@ -16,5 +16,8 @@
   "no": "No",
   "yes": "Yes",
   "noResultFound": "No result found!",
-  "empty":"Empty"
+  "empty":"Empty",
+  "about": "About",
+  "aboutAppText": "Flutter project structure is a project structure that I use in my projects. It is a simple and clean project structure that I have developed for myself.",
+  "close": "Close"
 }
