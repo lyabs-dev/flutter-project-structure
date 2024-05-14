@@ -6,10 +6,10 @@ import 'package:structure/utils/enums.dart';
 class AppCubit extends Cubit<AppState> {
 
   AppCubit(super.initialState) {
-    intiData();
+    initData();
   }
 
-  intiData() async {
+  initData() async {
     state.loadingState = CustomState.loading;
     emit(state.copy());
 
