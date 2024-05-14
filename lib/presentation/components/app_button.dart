@@ -6,7 +6,8 @@ class AppButton extends StatelessWidget {
   final IconData? icon;
   final Function onPressed;
   final FontWeight? textFontWeight;
-  final double fontSize, borderRadius, paddingHorizontal, paddingVertical, borderWidth;
+  final double? fontSize;
+  final double paddingHorizontal, paddingVertical, borderRadius, borderWidth;
   final Color primaryColor, foregroundColor, borderColor, highlightColor;
   final bool isLoading, showBorder, enabled;
   final BuildContext context;
@@ -19,12 +20,12 @@ class AppButton extends StatelessWidget {
         this.primaryColor = colorPrimary,
         this.highlightColor = const Color(0x20FFFFFF),
         this.foregroundColor = colorWhite,
-        this.fontSize = textSizeSMedium,
+        this.fontSize,
         this.borderRadius = 12,
         this.textFontWeight,
         this.icon,
-        this.paddingHorizontal = paddingMedium,
-        this.paddingVertical = paddingLargeMedium,
+        this.paddingHorizontal = paddingSmall,
+        this.paddingVertical = 0,
         this.borderWidth = 0,
         this.borderColor = colorPrimary,
         this.showBorder = false,
