@@ -3,91 +3,99 @@ import 'package:structure/utils/my_material.dart';
 class AppButton extends StatelessWidget {
 
   final String text;
-  final Widget? icon;
+  final IconData? icon;
   final Function onPressed;
   final FontWeight? textFontWeight;
-  final double? fontSize, borderRadius, paddingHorizontal, paddingVertical;
-  final Color primaryColor, textColor, highlightColor;
-  final bool whitIcons, isLoading;
+  final double fontSize, borderRadius, paddingHorizontal, paddingVertical, borderWidth;
+  final Color primaryColor, foregroundColor, borderColor, highlightColor;
+  final bool isLoading, showBorder, enabled;
   final BuildContext context;
 
   const AppButton(
       {super.key,
+        required this.context,
         required this.text,
         required this.onPressed,
-        required this.context,
         this.primaryColor = colorPrimary,
-        this.textColor = colorWhite,
+        this.highlightColor = const Color(0x20FFFFFF),
+        this.foregroundColor = colorWhite,
         this.fontSize = textSizeSMedium,
         this.borderRadius = 12,
         this.textFontWeight,
-        this.highlightColor = colorPrimary,
         this.icon,
         this.paddingHorizontal = paddingMedium,
-        this.paddingVertical = paddingMedium,
+        this.paddingVertical = paddingLargeMedium,
+        this.borderWidth = 0,
+        this.borderColor = colorPrimary,
+        this.showBorder = false,
         this.isLoading = false,
-        this.whitIcons = false});
+        this.enabled = true,
+      });
 
   @override
   Widget build(BuildContext context) {
 
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        customBorder:
-        RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius!)),
-        onTap: () {
-          if (! isLoading) {
-            onPressed();
-          }
-        },
-        highlightColor: colorWhite.withOpacity(0.2),
-        hoverColor: colorPrimary,
-        child: Ink(
-          //  width: getProportionateScreenWidth(width!, context),
-          decoration: BoxDecoration(
-              color: backgroundColor,
-              borderRadius: BorderRadius.all(Radius.circular(borderRadius!.r))),
-          padding: EdgeInsets.symmetric(
-              horizontal: paddingHorizontal!.r,
-              vertical:  paddingVertical!.r
-          ),
-          child: whitIcons
-              ? Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              icon!,
-              SizedBox(
-                width: getShortSize(5, context),
-              ),
-              Expanded(
-                child: Text(
-                  buttonText,
-                  style: TextStyle(
-                    fontSize:
-                    fontSize!.sp,
-                    color: textColor,
-                    fontWeight: textFontWeight ?? FontWeight.w600,
-                  ),
-                ),
-              ),
-            ],
-          )
-              : Text(
-            buttonText  ,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: fontSize!.sp,
-              color: textColor,
-              fontWeight: textFontWeight ?? FontWeight.w600,
-            ),
-          ),
+    if (icon != null) {
+      return ElevatedButton.icon(
+        onPressed: onClick,
+        icon: Icon(icon, color: foregroundColor),
+        label: child,
+        style: style,
+      );
+    }
+
+    return ElevatedButton(
+      onPressed: onClick,
+      style: style,
+      child: child,
+    );
+  }
+
+  ButtonStyle get style {
+    return ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
+      overlayColor: MaterialStateProperty.all<Color>(highlightColor),
+      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+        EdgeInsets.symmetric(
+          horizontal: paddingHorizontal,
+          vertical:  paddingVertical,
+        ),
+      ),
+      elevation: MaterialStateProperty.all<double>(0),
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+          side: showBorder? BorderSide(color: borderColor, width: borderWidth): BorderSide.none,
         ),
       ),
     );
   }
 
-  Color? get backgroundColor {
+  void Function()? onClick() {
+
+    if (isLoading || ! enabled) {
+      return null;
+    }
+
+    return onPressed();
+  }
+
+  Widget get child {
+    return Text(
+      buttonText,
+      style: TextStyle(
+        fontSize: fontSize,
+        color: foregroundColor,
+        fontWeight: textFontWeight,
+      ),
+    );
+  }
+
+  Color get backgroundColor {
+
+    if (! enabled) {
+      return Colors.grey.withOpacity(0.5);
+    }
 
     if (isLoading) {
       return primaryColor.withOpacity(0.5);

@@ -36,6 +36,7 @@ class HomePageState extends State<HomePage> {
                 const SizedBox(height: 16),
                 AppButton(
                     text: 'Show Confirm Dialog',
+                    icon: Icons.question_answer,
                     onPressed: () {
                       AppDialog.showConfirmDialog(context, 'Do you like this app?')
                           .then((value) => debugPrint('========> User\'s answer: $value'));
