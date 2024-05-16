@@ -41,7 +41,7 @@ class ErrorPage extends StatelessWidget {
                   ),
                   Visibility(
                     visible: onTry != null,
-                    child: AppButton(
+                    child: AppButtonWidget(
                       context: context,
                       text: AppLocalizations.of(context)!.tryAgain,
                       onPressed: (onTry != null) ? onTry! : () {},

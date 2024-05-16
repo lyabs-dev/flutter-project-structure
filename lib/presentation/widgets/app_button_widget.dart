@@ -1,6 +1,6 @@
 import 'package:structure/utils/my_material.dart';
 
-class AppButton extends StatelessWidget {
+class AppButtonWidget extends StatelessWidget {
 
   final String text;
   final IconData? icon;
@@ -12,7 +12,7 @@ class AppButton extends StatelessWidget {
   final bool isLoading, showBorder, enabled;
   final BuildContext context;
 
-  const AppButton(
+  const AppButtonWidget(
       {super.key,
         required this.context,
         required this.text,

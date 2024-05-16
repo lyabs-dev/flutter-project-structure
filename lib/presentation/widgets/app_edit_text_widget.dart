@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:structure/utils/my_material.dart';
 
-class AppEditText extends StatelessWidget {
+class AppEditTextWidget extends StatelessWidget {
 
   final String? hintText, labelText;
   final TextEditingController? controller;
@@ -21,7 +21,7 @@ class AppEditText extends StatelessWidget {
   final FocusNode? focusNode;
   final bool enabled;
 
-  const AppEditText(
+  const AppEditTextWidget(
       this.hintText,
       {
         super.key,

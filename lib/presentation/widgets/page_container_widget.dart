@@ -1,14 +1,14 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:structure/logic/cubits/app_cubit.dart';
 import 'package:structure/logic/states/app_state.dart';
-import 'package:structure/presentation/components/response_code_widget.dart';
+import 'package:structure/presentation/widgets/response_code_widget.dart';
 import 'package:structure/utils/my_material.dart';
 
-class PageContainer extends StatelessWidget {
+class PageContainerWidget extends StatelessWidget {
 
   final Widget child;
 
-  const PageContainer({super.key, required this.child});
+  const PageContainerWidget({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {

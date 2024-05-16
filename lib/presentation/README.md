@@ -5,8 +5,9 @@ This folder contains all about UI interface, it will communicate with logic laye
 
 It will contains:
 
-- components
+- dialogs
+- widgets
 - languages
 - router
-- screens
+- pages
 - styles

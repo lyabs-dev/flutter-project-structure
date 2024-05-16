@@ -16,7 +16,7 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return PageContainer(
+    return PageContainerWidget(
       child: Scaffold(
         appBar: AppBar(title: Text(AppLocalizations.of(context)!.appTitle)),
         body: SingleChildScrollView(
@@ -26,7 +26,7 @@ class HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 16),
-                AppButton(
+                AppButtonWidget(
                   text: 'Set Theme',
                   onPressed: () {
                     context.read<SettingsCubit>().toggleDarkMode();
@@ -34,7 +34,7 @@ class HomePageState extends State<HomePage> {
                   context: context,
                 ),
                 const SizedBox(height: 16),
-                AppButton(
+                AppButtonWidget(
                     text: 'Show Confirm Dialog',
                     icon: Icons.question_answer,
                     onPressed: () {
@@ -43,7 +43,7 @@ class HomePageState extends State<HomePage> {
                     },
                     context: context),
                 const SizedBox(height: 16),
-                AppButton(
+                AppButtonWidget(
                     text: 'Show Dialog',
                     onPressed: () {
                       context.read<AppCubit>().testShowDialog();
@@ -51,7 +51,7 @@ class HomePageState extends State<HomePage> {
                     context: context
                 ),
                 const SizedBox(height: 16),
-                AppButton(
+                AppButtonWidget(
                     text: 'Show About Dialog',
                     onPressed: () {
                       AppDialog.showAboutAppDialog(context);
@@ -59,7 +59,7 @@ class HomePageState extends State<HomePage> {
                     context: context
                 ),
                 const SizedBox(height: 16),
-                AppButton(
+                AppButtonWidget(
                     text: 'Show custom dialog',
                     onPressed: () {
                       AppDialog(

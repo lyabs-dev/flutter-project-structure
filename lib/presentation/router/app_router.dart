@@ -1,3 +1,4 @@
+import 'package:structure/presentation/pages/home_page/home_page.dart';
 import 'package:structure/presentation/router/no_animation_route.dart';
 import 'package:structure/utils/my_material.dart';
 

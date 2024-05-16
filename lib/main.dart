@@ -1,6 +1,7 @@
 import 'package:structure/logic/cubits/app_cubit.dart';
 import 'package:structure/logic/states/app_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:structure/presentation/pages/home_page/home_page.dart';
 import 'package:structure/utils/my_material.dart';
 
 void main() async {
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 theme: (state.settings.isDarkMode)? darkTheme: lightTheme,
                 onGenerateRoute: appRouter.onGenerateRoute,
-                home: PageContainer(
+                home: PageContainerWidget(
                   child: BlocBuilder<AppCubit, AppState>(
                     builder: (appContext, appState) {
 

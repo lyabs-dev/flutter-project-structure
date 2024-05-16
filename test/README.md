@@ -1,6 +1,16 @@
-/lib/data/tests/
-================
+/test/
+======
 
-This folder contains units tests method.
-The tests as separated by categories classes and are stored in tests/ folder. They have been calling in app_test.dart.
-Tests are executed on app launch, methods should be commented after running tests.
+This folder contains units tests methods.
+
+To launch all tests, execute the following command:
+
+```bash
+flutter test
+```
+
+To launch a specific test, execute the following command:
+
+```bash
+flutter test test/<test_file>.dart
+```
