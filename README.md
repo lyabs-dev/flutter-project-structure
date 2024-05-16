@@ -1,66 +1,47 @@
 # Flutter Project Structure
 
-A simple structure of a Flutter project that use <a href="https://pub.dev/packages/flutter_bloc">bloc architecture</a>  to help you to maintain easily you source code.
+A simple structure of a Flutter project that uses [bloc architecture](https://pub.dev/packages/flutter_bloc) to help you maintain your source code easily with a clean and scalable architecture.
 
-# Steps to launch
+## Steps to launch
 Follow these steps to launch your project:
 
-<h2>Global Configurations</h2>
+### Global Configurations
 
-<ol>
-    <li>Extract the archive release file and open the folder with your Editor (Android studio, VS Code,...)</li>
-    <li>Go to <b>assets/images</b> and replace the logo.jpg file with your own (it must have the same name and the same extension)</li>
-    <li>In flutter console, go to project folder then run these two commands:
-    <blockquote>
-        <code>
-            <p>flutter pub get</p>
-            <p>flutter pub run flutter_launcher_icons:main</p>
-        </code>
-    </blockquote>
-    </li>
-    <li>
-    Open <b>lib/presentation/languages/l10n/intl_en.arb</b> and replace <i>app_title</i> field with your app title
-    </li>
-    <li>
-        In <b>lib/utils/constants.dart</b> update colorHex constant with your main app color.
-    </li>
-    <li> (Optional) In <b>lib/presentation/styles/styles.dart</b> you can edit other style properties of your app.</li>
-</ol>
+1. Extract the archive release file and open the folder with your Editor (Android studio, VS Code,...)
+2. Go to `assets/images` and replace the `logo.jpg` file with your own (it must have the same name and the same extension)
+3. In flutter console, go to project folder then run these two commands:
+    ```
+    flutter pub get
+    flutter pub run flutter_launcher_icons:main
+    ```
+4. Open `lib/presentation/languages/l10n/intl_en.arb` and replace `app_title` field with your app title
+5. In `lib/utils/constants.dart` update `colorHex` constant with your main app color and colorSecondary with your secondary color
+6. (Optional) In `lib/presentation/styles/styles.dart` you can edit other style properties of your app.
 
-<h2>Android</h2>
+### Android
 
-<ol>
-    <li>In <b>android/app/build.gradle</b> look for <i>namespace</i> in <i>android</i> block and change it's value with your package name</li>
-    <li>In <b>android/app/build.gradle</b> look for <i>applicationId</i> in <i>defaultConfig</i> block and change it's value with your package name</li>
-    <li>In <b>android/app/src/main/kotlin/dev/lyabs/structure/MainActivity.kt</b> replace <code>flutter_project_structure</code> with your package name</li>
-    <li>In <b>android/app/src/main/AndroidManifest.xml</b> replace the value of <code>android:label</code> with your app name</li>
-</ol>
+1. In `android/app/build.gradle` look for `namespace` in `android` block and change its value with your package name
+2. In `android/app/build.gradle` look for `applicationId` in `defaultConfig` block and change its value with your package name
+3. In `android/app/src/main/kotlin/dev/lyabs/structure/MainActivity.kt` replace `dev.lyabs.structure` with your package name
+4. In `android/app/src/main/AndroidManifest.xml` replace the value of `android:label` with your app name
 
-<h2>IOS</h2>
+### IOS
 
-<ol>
-    <li>In <b>ios/Runner/Info.plist</b> replace value of <code>CFBundleName</code> with your own (only lower case letters separated by '_' allowed)</li>
-    <li>
-        Review XCode project settings:
-        <ol>
-            <li>In Xcode, open <b>Runner.xcworkspace</b> in your app’s <b>ios</b> folder</li>
-            <li>To view your app’s settings, select the Runner project in the Xcode project navigator. Then, in the main view sidebar, select the Runner target</li>
-            <li>Select the <b>General</b> tab</li>
-            <li>Replace <b>Display Name</b> and <b>Bundle Identifier</b> by your own value</li>
-        </ol>
-    </li>
-</ol>
+1. In `ios/Runner/Info.plist` replace value of `CFBundleName` with your own (only lower case letters separated by '_' allowed)
+2. In `ios/Runner/Info.plist` replace value of `CFBundleDisplayName` with your app name
+3. Review XCode project settings:
+    1. In Xcode, open `Runner.xcworkspace` in your app’s `ios` folder
+    2. To view your app’s settings, select the Runner project in the Xcode project navigator. Then, in the main view sidebar, select the Runner target
+    3. Select the `General` tab and replace `Bundle Identifier` by your own value
+    4. Select the `Signing & Capabilities` tab and replace `Bundle Identifier` by your own value 
 
-<h2>Web</h2>
+### Web
 
-<ol>
-    <li>In <b>web/index.html</b> replace the value of <code>title</code> tag with your web app name</li>
-    <li>In <b>web/index.html</b> replace the value of meta description content with a description of your app
-    <blockquote>
-    <code>&lt;meta name="description" content="YOUR_APP_DESCRIPTION"&gt;</code>
-    </blockquote>
-    </li>
-    <li>In <b>web/manifest.json</b> replace values of <code>name, short_name, theme_color, description, </code> with your own</li>
-</ol>
+1. In `web/index.html` replace the value of `title` tag with your web app name
+2. In `web/index.html` replace the value of meta description content with a description of your app
+    ```
+    <meta name="description" content="YOUR_APP_DESCRIPTION">
+    ```
+3. In `web/manifest.json` replace values of `name, short_name, theme_color, description,` with your own
 
-<h1><b>Enjoy IT 😊</b></h1>
+> Enjoy Developing with IT! 😊
