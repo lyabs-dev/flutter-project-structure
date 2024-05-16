@@ -4,7 +4,7 @@ const langCodeDefault = 'en';
 const supportedLanguages = ['en'];
 
 /// PAGES
-const pageHome = '/';
+const pageHome = '/home';
 const pageNotification = '/notification';
 
 const fieldStatusCode = 'status_code';
