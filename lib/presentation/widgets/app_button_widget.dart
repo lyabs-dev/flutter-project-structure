@@ -54,16 +54,16 @@ class AppButtonWidget extends StatelessWidget {
 
   ButtonStyle get style {
     return ButtonStyle(
-      backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
-      overlayColor: MaterialStateProperty.all<Color>(highlightColor),
-      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+      backgroundColor: WidgetStateProperty.all<Color>(backgroundColor),
+      overlayColor: WidgetStateProperty.all<Color>(highlightColor),
+      padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
         EdgeInsets.symmetric(
           horizontal: paddingHorizontal,
           vertical:  paddingVertical,
         ),
       ),
-      elevation: MaterialStateProperty.all<double>(0),
-      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      elevation: WidgetStateProperty.all<double>(0),
+      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius),
           side: showBorder? BorderSide(color: borderColor, width: borderWidth): BorderSide.none,
