@@ -48,7 +48,7 @@ State management uses `flutter_bloc` (Cubits). The data flow is:
 - **`constants.dart`** — All app constants: routes, setting keys, argument keys, spacing/text sizes, colors, supported languages. Settings constants use a `setting` prefix (e.g., `settingDarkMode`).
 - **`enums.dart`** — All app-wide enumerations.
 - **`methods.dart`** — Standalone helper functions not tied to any layer.
-- **`my_material.dart`** — Barrel export file. Import this file instead of writing multiple individual imports.
+- **`my_material.dart`** — Barrel export file for base/core imports only (e.g., `constants.dart`, `styles.dart`, `app_router.dart`, `enums.dart`, `methods.dart`, `size_config.dart`, `path_assets.dart`). Do not add feature-specific files (models, cubits, states, repositories, etc.) to this file. Feature-specific files must be imported individually at the file level.
 - **`path_assets.dart`** — Asset path variables organized in classes (`PathImage`, `PathIcons`, `PathAnimation`). Never hardcode asset paths elsewhere.
 - **`size_config.dart`** — Responsive layout helpers (`getProportionateScreenHeight`, `getProportionateScreenWidth`, `getShortSize`).
 
@@ -173,5 +173,5 @@ Tests live in `test/`. All test files must end with `_test.dart`.
 - Do not add logic to presentation layer files (pages/widgets). Logic belongs in cubits.
 - Do not call providers directly from cubits — always go through repositories.
 - Do not hardcode strings, colors, spacing, or asset paths. Use constants, styles, and path variables.
-- Do not import individual files when `my_material.dart` already exports them.
+- Do not add feature-specific files (models, cubits, states, providers, repositories, responses, pages, widgets, dialogs) to `my_material.dart`. Only base infrastructure files belong there. Import feature-specific files individually.
 - Do not create new `BlocProvider` instances globally unless the cubit is truly app-wide.
