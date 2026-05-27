@@ -4,7 +4,6 @@ import 'package:structure/logic/states/app_state.dart';
 import 'package:structure/utils/enums.dart';
 
 class AppCubit extends DefaultCubit<AppState> {
-
   AppCubit(super.initialState);
 
   @override
@@ -17,15 +16,15 @@ class AppCubit extends DefaultCubit<AppState> {
   }
 
   @override
-  Future<void> showMessage({AppCode? code, MessageType type = MessageType.toast}) async {
+  Future<void> showMessage(
+      {AppCode? code, MessageType type = MessageType.toast}) async {
     await super.showMessage(code: code, type: type);
     emit(state.copy());
   }
 
   // Simple test which display a success dialog
-  testShowDialog() async {
+  void testShowDialog() async {
     await Future.delayed(const Duration(milliseconds: 700));
     showMessage(code: AppCode.success, type: MessageType.dialog);
   }
-
 }

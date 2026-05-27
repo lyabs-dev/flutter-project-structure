@@ -5,7 +5,6 @@ import 'package:structure/presentation/widgets/response_code_widget.dart';
 import 'package:structure/utils/my_material.dart';
 
 class PageContainerWidget extends StatelessWidget {
-
   final Widget child;
 
   const PageContainerWidget({super.key, required this.child});
@@ -18,14 +17,10 @@ class PageContainerWidget extends StatelessWidget {
     );
   }
 
-  listener(BuildContext context, AppState state) {
-
+  void listener(BuildContext context, AppState state) {
     if (state.response != null) {
-
       ResponseCodeWidget(context: context, item: state.response!).show();
       state.response = null;
     }
-
   }
-
 }

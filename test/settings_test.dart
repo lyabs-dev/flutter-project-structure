@@ -12,14 +12,14 @@ void main() {
   set();
 }
 
-get() {
+void get() {
   test.test('Get settings', () async {
     settingsItem = await repository.getSettings();
     test.expect(settingsItem.toMap(), test.isNotEmpty);
   });
 }
 
-set() {
+void set() {
   test.test('Set settings', () async {
     settingsItem.isDarkMode = false;
     bool res = await repository.setSettings(settingsItem);

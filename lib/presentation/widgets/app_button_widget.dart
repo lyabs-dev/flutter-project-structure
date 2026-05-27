@@ -1,7 +1,6 @@
 import 'package:structure/utils/my_material.dart';
 
 class AppButtonWidget extends StatelessWidget {
-
   final String text;
   final IconData? icon;
   final Function onPressed;
@@ -12,30 +11,29 @@ class AppButtonWidget extends StatelessWidget {
   final bool isLoading, showBorder, enabled;
   final BuildContext context;
 
-  const AppButtonWidget(
-      {super.key,
-        required this.context,
-        required this.text,
-        required this.onPressed,
-        this.primaryColor = colorPrimary,
-        this.highlightColor = const Color(0x20FFFFFF),
-        this.foregroundColor = colorWhite,
-        this.fontSize,
-        this.borderRadius = 12,
-        this.textFontWeight,
-        this.icon,
-        this.paddingHorizontal = paddingSmall,
-        this.paddingVertical = 0,
-        this.borderWidth = 0,
-        this.borderColor = colorPrimary,
-        this.showBorder = false,
-        this.isLoading = false,
-        this.enabled = true,
-      });
+  const AppButtonWidget({
+    super.key,
+    required this.context,
+    required this.text,
+    required this.onPressed,
+    this.primaryColor = colorPrimary,
+    this.highlightColor = const Color(0x20FFFFFF),
+    this.foregroundColor = colorWhite,
+    this.fontSize,
+    this.borderRadius = 12,
+    this.textFontWeight,
+    this.icon,
+    this.paddingHorizontal = paddingSmall,
+    this.paddingVertical = 0,
+    this.borderWidth = 0,
+    this.borderColor = colorPrimary,
+    this.showBorder = false,
+    this.isLoading = false,
+    this.enabled = true,
+  });
 
   @override
   Widget build(BuildContext context) {
-
     if (icon != null) {
       return ElevatedButton.icon(
         onPressed: onClick,
@@ -59,22 +57,23 @@ class AppButtonWidget extends StatelessWidget {
       padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
         EdgeInsets.symmetric(
           horizontal: paddingHorizontal,
-          vertical:  paddingVertical,
+          vertical: paddingVertical,
         ),
       ),
       elevation: WidgetStateProperty.all<double>(0),
       shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius),
-          side: showBorder? BorderSide(color: borderColor, width: borderWidth): BorderSide.none,
+          side: showBorder
+              ? BorderSide(color: borderColor, width: borderWidth)
+              : BorderSide.none,
         ),
       ),
     );
   }
 
   void Function()? onClick() {
-
-    if (isLoading || ! enabled) {
+    if (isLoading || !enabled) {
       return null;
     }
 
@@ -93,20 +92,18 @@ class AppButtonWidget extends StatelessWidget {
   }
 
   Color get backgroundColor {
-
-    if (! enabled) {
-      return Colors.grey.withOpacity(0.5);
+    if (!enabled) {
+      return Colors.grey.withValues(alpha: 0.5);
     }
 
     if (isLoading) {
-      return primaryColor.withOpacity(0.5);
+      return primaryColor.withValues(alpha: 0.5);
     }
 
     return primaryColor;
   }
 
   String get buttonText {
-
     if (isLoading) {
       return '${AppLocalizations.of(context)!.loading}...';
     }

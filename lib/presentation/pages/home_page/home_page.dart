@@ -3,7 +3,6 @@ import 'package:structure/logic/cubits/app_cubit.dart';
 import 'package:structure/presentation/dialogs/custom_dialog.dart';
 import '../../../utils/my_material.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -38,8 +37,10 @@ class HomePageState extends State<HomePage> {
                     text: 'Show Confirm Dialog',
                     icon: Icons.question_answer,
                     onPressed: () {
-                      AppDialog.showConfirmDialog(context, 'Do you like this app?')
-                          .then((value) => debugPrint('========> User\'s answer: $value'));
+                      AppDialog.showConfirmDialog(
+                              context, 'Do you like this app?')
+                          .then((value) =>
+                              debugPrint('========> User\'s answer: $value'));
                     },
                     context: context),
                 const SizedBox(height: 16),
@@ -48,16 +49,14 @@ class HomePageState extends State<HomePage> {
                     onPressed: () {
                       context.read<AppCubit>().testShowDialog();
                     },
-                    context: context
-                ),
+                    context: context),
                 const SizedBox(height: 16),
                 AppButtonWidget(
                     text: 'Show About Dialog',
                     onPressed: () {
                       AppDialog.showAboutAppDialog(context);
                     },
-                    context: context
-                ),
+                    context: context),
                 const SizedBox(height: 16),
                 AppButtonWidget(
                     text: 'Show custom dialog',
@@ -71,13 +70,12 @@ class HomePageState extends State<HomePage> {
                         customContent: const CustomDialog(),
                       ).show();
                     },
-                    context: context
-                ),
+                    context: context),
                 const SizedBox(height: 16),
                 Container(
                   width: 1.sw,
                   height: 0.8.sh,
-                  color: colorPrimary.withOpacity(0.3),
+                  color: colorPrimary.withValues(alpha: 0.3),
                 ),
                 const SizedBox(height: 16),
               ],
